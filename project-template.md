@@ -43,7 +43,6 @@ To be completed later.
 
 |  Day | Deliverable | Status
 |---|---| ---|
-
 |Dec 4| Project Approval / Airtable Setup| Incomplete
 |Dec 7| Create Components / Get & Set Data & Create Adding Form | Incomplete
 |Dec 8| CSS | Incomplete
@@ -75,7 +74,6 @@ To be completed later.
 | MeTime CSS | H | 1hrs| --- | --- |
 | WellnessTime CSS | H | 4hrs| --- | --- |
 | Advanced CSS | H | 2hrs| --- | --- |
-
 | Total | H | 43hrs| --- | --- |
 
 ## SWOT Analysis
