@@ -1,4 +1,4 @@
-export const baseURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/wellness`;
+export const baseURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/wellnessTime`;
 
 export const config = {
     headers: {
