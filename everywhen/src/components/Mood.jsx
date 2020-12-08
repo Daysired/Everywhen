@@ -1,10 +1,14 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 const Mood = (props) => {
+  const myMood = props.info.map((mood) => {
+    return (
+      <h3>Mood:{mood.fields.mood}</h3>
+    )
+  })
   return (
     <div>
-      <h3>Mood: {props.wellnessTime.fields.mood}</h3>
+     {myMood}
     </div>
   );
 };

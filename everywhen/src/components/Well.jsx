@@ -26,7 +26,7 @@ const Well = (props) => {
    
     return (
         <div>
-            {currentWell.fields && (
+            {/* {currentWelly.fields && (
                 <div>
                     <h1>{currentWelly.fields.mood}</h1>
                     <h4>Highlight: {currentWelly.fields.highlight}</h4>
@@ -36,7 +36,7 @@ const Well = (props) => {
                     <h4>What Worked: {currentWelly.fields.whatWorked}</h4>
                     <h4>What to Improve: {currentWelly.fields.improve}</h4>
                 </div>
-            )}
+            )} */}
         </div>
     );
   };

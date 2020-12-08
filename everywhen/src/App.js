@@ -38,9 +38,31 @@ function App() {
           <WellnessTime wellnessTime={wellnessTime} key={wellnessTime.id} setToggleFetch={setToggleFetch} />
         ))}
       </Route>
+
       <Route path='/wellness/:id'>
         <Well info={info} setToggleFetch={setToggleFetch} />
       </Route>
+
+      <Route path='/mood/'>
+        <Mood info={info}  setToggleFetch={setToggleFetch} />
+      </Route>
+
+      <Route path='/vent/'>
+        <Vent info={info}  setToggleFetch={setToggleFetch} />
+      </Route>
+
+      <Route path='/highlight/'>
+        <Highlight info={info}  setToggleFetch={setToggleFetch} />
+      </Route>
+
+      <Route path='/whatworked/'>
+        <Whatworked info={info} setToggleFetch={setToggleFetch} />
+      </Route>
+
+      <Route path='/improve/'>
+        <Improve info={info}  setToggleFetch={setToggleFetch} />
+      </Route>
+
     </div>
   );
 }
