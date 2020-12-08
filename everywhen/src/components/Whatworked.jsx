@@ -39,23 +39,34 @@ const Whatworked = (props) => {
     props.setToggleFetch((prev) => !prev);
     history.push("/");
   };
+  
+  // const [showMore, setShowMore] = useState(false)
+  // const handleSubmit = (e) => {
+  //   setShowMore(!showMore)
+  // }
+
   return (
     <div>
       {myWork}
-      <button></button>
-      <div Class="card">
-        <form onSubmit={handleSubmit}>
-        <h3>What Worked</h3>
-          <label htmlFor="whatworked">What Worked</label>
-          <input
-            name="whatworked"
-            type="text"
-            value={whatWorked}
-            onChange={(e) => setWhatWorked(e.target.value)}
-          />
-          <button type="submit">Make Entry</button>
-        </form>
-      </div>
+
+    {/* <button onClick={handleSubmit}>
+       Show More 
+     </button>
+      { showMore ? */}
+        <div Class="card">
+          <form onSubmit={handleSubmit}>
+            <h3>What Worked</h3>
+            <label htmlFor="whatworked">What Worked</label>
+            <input
+              name="whatworked"
+              type="text"
+              value={whatWorked}
+              onChange={(e) => setWhatWorked(e.target.value)}
+            />
+            <button type="submit">Make Entry</button>
+          </form>
+        </div>:
+      {/* } */}
     </div>
   );
 }

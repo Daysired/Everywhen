@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,6 +7,45 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { withRouter } from "react-router-dom";
+
+// import Mood from "/mood/";
+// import Highlight from "/highlight/";
+
+// class NavTabs extends Component {
+
+//  handleCallToRouter = (value) => {
+//    this.props.history.push(value);
+//  }
+
+//   render () {
+//      return (
+//       <Tabs
+//         value={this.props.history.location.pathname}
+//         onChange={this.handleCallToRouter}
+//         >
+//         <Tab
+//           label="Mood"
+//           value="/mood/"
+//         >
+//         <div>
+//            <Mood />
+//         </div>
+//         </Tab>
+//         <Tab
+//           label="Highlight"
+//           value="/highlight/"
+//             >
+//           <div>
+//             <Highlight />
+//           </div>
+//         </Tab>
+//       </Tabs>           
+//     )
+//   }
+// }
+
+// export default withRouter(NavTabs)  
 
 // function TabPanel(props) {
 //   const { children, value, index, ...other } = props;
@@ -48,7 +87,7 @@ import Box from '@material-ui/core/Box';
 //   },
 // }));
 
-// export default function SimpleTabs() {
+// export default function SimpleTabs(props) {
 //   const classes = useStyles();
 //   const [value, setValue] = React.useState(0);
 
@@ -59,8 +98,9 @@ import Box from '@material-ui/core/Box';
 //   return (
 //     <div className={classes.root}>
 //       <AppBar position="static">
-//         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-//           <Tab label="Mood" {...a11yProps(0)} />
+     
+//         <Tabs value={value} onChange={handleChange}>
+//           <Tab label="Mood" containerElement={<Link to={`/mood/${props.wellnessTime.id}`} />} />
 //           <Tab label="Highlight" {...a11yProps(1)} />
 //           <Tab label="Vent" {...a11yProps(2)} />
 //           <Tab label="Coping Strategies" {...a11yProps(3)} />
@@ -69,7 +109,7 @@ import Box from '@material-ui/core/Box';
 //         </Tabs>
 //       </AppBar>
 //       <TabPanel value={value} index={0}>
-//         Mood
+       
 //       </TabPanel>
 //       <TabPanel value={value} index={1}>
 //        Highlight

@@ -36,7 +36,7 @@ const Highlight = (props) => {
       await axios.post(baseURL, { fields }, config);
     }
     props.setToggleFetch((prev) => !prev);
-    history.push("/");
+    history.push("/mood/");
   };
   return (
     <div>
