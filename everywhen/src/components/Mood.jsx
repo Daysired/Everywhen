@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Mood = (props) => {
+  
   const myMood = props.info.map((mood) => {
     return (
       <h3>Mood:{mood.fields.mood}</h3>
@@ -8,7 +9,7 @@ const Mood = (props) => {
   })
   return (
     <div>
-     {myMood}
+      {myMood}
     </div>
   );
 };

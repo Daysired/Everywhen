@@ -40,19 +40,19 @@ const Whatworked = (props) => {
     history.push("/");
   };
   
-  // const [showMore, setShowMore] = useState(false)
-  // const handleSubmit = (e) => {
-  //   setShowMore(!showMore)
-  // }
+  const [showMore, setShowMore] = useState(false)
+  const handleClick = (e) => {
+    setShowMore(!showMore)
+  }
 
   return (
     <div>
       {myWork}
 
-    {/* <button onClick={handleSubmit}>
-       Show More 
+    <button onClick={handleClick}>
+       Add Entry 
      </button>
-      { showMore ? */}
+      { showMore ?
         <div Class="card">
           <form onSubmit={handleSubmit}>
             <h3>What Worked</h3>
@@ -65,8 +65,8 @@ const Whatworked = (props) => {
             />
             <button type="submit">Make Entry</button>
           </form>
-        </div>:
-      {/* } */}
+        </div> : <p></p>
+      } 
     </div>
   );
 }

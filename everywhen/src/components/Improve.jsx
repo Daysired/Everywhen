@@ -38,9 +38,19 @@ const Improve = (props) => {
     props.setToggleFetch((prev) => !prev);
     history.push("/");
   };
+  
+  const [showMore, setShowMore] = useState(false)
+  const handleClick = (e) => {
+    setShowMore(!showMore)
+  }
+
   return (
     <div>
       {myImprovement}
+      <button onClick={handleClick}>
+       Add Entry 
+     </button>
+      { showMore ?
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>What To Improve</h3>
@@ -53,7 +63,8 @@ const Improve = (props) => {
           />
           <button type="submit">Make Entry</button>
         </form>
-      </div>
+      </div>: <p></p>
+      }
     </div>
   );
 }

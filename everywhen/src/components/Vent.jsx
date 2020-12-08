@@ -38,9 +38,19 @@ const Vent = (props) => {
     props.setToggleFetch((prev) => !prev);
     history.push("/");
   };
+
+  const [showMore, setShowMore] = useState(false)
+  const handleClick = (e) => {
+    setShowMore(!showMore)
+  }
+
   return (
     <div>
       {myVent}
+      <button onClick={handleClick}>
+       Add Entry 
+     </button>
+      { showMore ?
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>VENT THAT SH*T!</h3>
@@ -53,7 +63,8 @@ const Vent = (props) => {
           />
           <button type="submit">Make Entry</button>
         </form>
-      </div>
+      </div>: <p></p>
+      }
     </div>
   );
 }

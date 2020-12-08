@@ -2,9 +2,6 @@
   text-align: center;
 }
 
-#form1 {
-  display: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

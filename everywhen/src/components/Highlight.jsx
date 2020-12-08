@@ -38,9 +38,19 @@ const Highlight = (props) => {
     props.setToggleFetch((prev) => !prev);
     history.push("/mood/");
   };
+
+  const [showMore, setShowMore] = useState(false)
+  const handleClick = (e) => {
+    setShowMore(!showMore)
+  }
+
   return (
     <div>
       {myHighlight}
+      <button onClick={handleClick}>
+       Add Entry 
+     </button>
+      { showMore ?
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>Highlight</h3>
@@ -53,7 +63,8 @@ const Highlight = (props) => {
           />
           <button type="submit">Make Entry</button>
         </form>
-      </div>
+      </div>: <p></p>
+      }
     </div>
   );
 }
