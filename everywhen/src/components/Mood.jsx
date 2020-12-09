@@ -68,7 +68,7 @@ export default function FloatingActionButtons(props) {
         <button type="submit">Submit</button>
       </form>
 
-      <Fab color="secondary" aria-label="edit">
+      <Fab color="secondary">
         <SentimentDissatisfiedIcon />
       </Fab>
       <Fab color="secondary">
@@ -81,7 +81,7 @@ export default function FloatingActionButtons(props) {
       <Fab color="secondary">
         <SentimentVeryDissatisfiedIcon />
       </Fab>
-      <Fab color="secondary" aria-label="edit">
+      <Fab color="secondary">
         <SentimentVerySatisfiedIcon />
       </Fab>
     </div>

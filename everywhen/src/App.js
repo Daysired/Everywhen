@@ -8,12 +8,14 @@ import Vent from "./components/Vent";
 import Whatworked from "./components/Whatworked";
 import Improve from "./components/Improve";
 import Date from "./components/Date";
+import WellnessCard from "./components/WellnessCard"
 import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { baseURL, config } from "./services";
 import './App.css';
 
 function App() {
+
   const [info, setInfo] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   const [tabs, setTabs] = useState({
@@ -56,20 +58,25 @@ console.log(tabs.mood)
 
       </Route>
       <Route path='/well-time'>
-        {info.map((wellnessTime) => (
           <WellnessTime
-            wellnessTime={wellnessTime}
-            key={wellnessTime.id}
+            // wellnessTime={wellnessTime}
             setToggleFetch={setToggleFetch}
             handleClick={handleClick}
           />
-        ))}
+      
        
         {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} />}
         {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} />}
         {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} />}
         {tabs.whatworked && <Whatworked info={info} setToggleFetch={setToggleFetch} />}
         {tabs.improve && <Improve info={info}  setToggleFetch={setToggleFetch} />}
+      </Route>
+
+      <Route path="/well-card">
+        {info.map((card) => (
+          <WellnessCard cardInfo={card}  key={card.id}/>  
+        ))}
+        
       </Route>
 
       {/* <Route path='/wellness/:id'>
@@ -95,6 +102,8 @@ console.log(tabs.mood)
       <Route path='/improve/'>
         <Improve info={info} setToggleFetch={setToggleFetch} />
       </Route> */}
+
+      
 
     </div>
   );
