@@ -69,7 +69,8 @@ console.log(tabs.mood)
         {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} />}
         {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} />}
         {tabs.whatworked && <Whatworked info={info} setToggleFetch={setToggleFetch} />}
-        {tabs.improve && <Improve info={info}  setToggleFetch={setToggleFetch} />}
+        {tabs.improve && <Improve info={info} setToggleFetch={setToggleFetch} />}
+        
       </Route>
 
       <Route path="/well-card">
@@ -78,6 +79,7 @@ console.log(tabs.mood)
         ))}
         
       </Route>
+
 
       {/* <Route path='/wellness/:id'>
         <Well info={info} setToggleFetch={setToggleFetch} />
