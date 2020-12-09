@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -12,14 +13,9 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Highlight from "./Highlight";
-import Vent from "./Vent";
-import Whatworked from "./Whatworked";
-import Improve from "./Improve";
-import Date from "./Date";
+import { baseURL, config } from "../services";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,13 +41,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const WellnessCard = (props) => {
- 
+
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+  const handleDelete = async () => {
+    const cardURL = `${baseURL}/${props.cardInfo.id}`;
+    await axios.delete(cardURL, config);
+    props.setToggleFetch((prev) => !prev);
+  };
+
 
   return (
     <Card className={classes.root}>
@@ -83,6 +86,7 @@ const WellnessCard = (props) => {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
+        <button onClick={handleDelete}>Delete</button>
 
         <IconButton
           className={clsx(classes.expand, {

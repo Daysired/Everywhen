@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 import { baseURL, config } from "./services";
 import './App.css';
 
-function App() {
+function App(props) {
 
   const [info, setInfo] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
@@ -75,7 +75,7 @@ console.log(tabs.mood)
 
       <Route path="/well-card">
         {info.map((card) => (
-          <WellnessCard cardInfo={card}  key={card.id}/>  
+          <WellnessCard cardInfo={card}  key={card.id} setToggleFetch={setToggleFetch}/>  
         ))}
         
       </Route>

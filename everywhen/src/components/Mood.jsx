@@ -26,6 +26,7 @@ export default function FloatingActionButtons(props) {
   
   const classes = useStyles();
   const [date, setDate] = useState("");
+  const [mood, setMood] = useState("");
 
   const history = useHistory();
   const params = useParams();
@@ -44,6 +45,7 @@ export default function FloatingActionButtons(props) {
 
     const fields = {
       date,
+      mood,
     };
 
     if (params.id) {
@@ -68,23 +70,35 @@ export default function FloatingActionButtons(props) {
         />
         <button type="submit">Submit</button>
       </form>
-
+      
+      <span onClick={() => setMood("dissatisfied")}>
       <Fab color="secondary">
         <SentimentDissatisfiedIcon />
       </Fab>
+      </span>
+      <span onClick={() => setMood("satisfiedv")}>
       <Fab color="secondary">
         <SentimentSatisfiedAltIcon />
-      </Fab>
+        </Fab>
+      </span>
+      
+      <span onClick={() => setMood("satisfied")}>
       <Fab color="secondary">
         <SentimentSatisfiedIcon />
-      </Fab>
+        </Fab>
+        </span>
 
+       <span onClick={() => setMood("verydissatisfied")}>
       <Fab color="secondary">
         <SentimentVeryDissatisfiedIcon />
       </Fab>
+      </span>
+
+      <span onClick={() => setMood("verysatisfied")}>
       <Fab color="secondary">
         <SentimentVerySatisfiedIcon />
-      </Fab>
+        </Fab>
+        </span>
     </div>
   );
 }
