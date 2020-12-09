@@ -1,17 +1,19 @@
-import React from 'react';
+import React from "react";
 import { useEffect, useState } from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
-import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
-import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
-import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAlt';
-import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
-import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
-
+import { useHistory, useParams } from "react-router-dom";
+import axios from "axios";
+import { baseURL, config } from "../services";
+import { makeStyles } from "@material-ui/core/styles";
+import Fab from "@material-ui/core/Fab";
+import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
+import SentimentDissatisfiedIcon from "@material-ui/icons/SentimentDissatisfied";
+import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt";
+import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
+import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& > *': {
+    "& > *": {
       margin: theme.spacing(1),
     },
   },
@@ -20,11 +22,52 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FloatingActionButtons() {
+export default function FloatingActionButtons(props) {
   const classes = useStyles();
+  const [date, setDate] = useState("");
+
+  const history = useHistory();
+  const params = useParams();
+
+  useEffect(() => {
+    if (params.id && props.wellnesTime.length > 0) {
+      const wellnessTime = props.wellnessTime.find(
+        (wellnessTime) => wellnessTime.id === params.id
+      );
+      setDate(wellnessTime.fields.vent);
+    }
+  }, [props.wellnessTime, params.id]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const fields = {
+      date,
+    };
+
+    if (params.id) {
+      const dateURL = `${baseURL}/${params.id}`;
+      await axios.put(dateURL, { fields }, config);
+    } else {
+      await axios.post(baseURL, { fields }, config);
+    }
+    props.setToggleFetch((prev) => !prev);
+    history.push("/");
+  };
 
   return (
     <div className={classes.root}>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="date">Date</label>
+        <input
+          name="vent"
+          type="text"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+        <button type="submit">Submit</button>
+      </form>
+
       <Fab color="secondary" aria-label="edit">
         <SentimentDissatisfiedIcon />
       </Fab>
@@ -34,14 +77,13 @@ export default function FloatingActionButtons() {
       <Fab color="secondary">
         <SentimentSatisfiedIcon />
       </Fab>
-    
+
       <Fab color="secondary">
         <SentimentVeryDissatisfiedIcon />
       </Fab>
       <Fab color="secondary" aria-label="edit">
         <SentimentVerySatisfiedIcon />
       </Fab>
-     
     </div>
   );
 }
@@ -61,19 +103,17 @@ export default function FloatingActionButtons() {
 //     <div>
 //       {myMood}
 //        <button onClick={handleSubmit}>
-//         Show More 
+//         Show More
 //      </button>
-//       {showMore ? 
+//       {showMore ?
 //         <div>
 //         <h5>hi</h5>
 //         <h5>hello</h5> </div>
 //         :
 //         <p></p>
-//       } 
+//       }
 //      </div>
 //   );
-// } 
+// }
 
 // export default Mood;
-
-

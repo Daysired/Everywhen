@@ -7,7 +7,7 @@ import Highlight from "./components/Highlight";
 import Vent from "./components/Vent";
 import Whatworked from "./components/Whatworked";
 import Improve from "./components/Improve";
-import Coping from "./components/Coping";
+import Date from "./components/Date";
 import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { baseURL, config } from "./services";

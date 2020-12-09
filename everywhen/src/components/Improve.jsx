@@ -11,6 +11,8 @@ const Improve = (props) => {
     )
   })
   const [improve, setImprove] = useState("");
+  const [negativeEmotions, setNegativeEmotions] = useState("");
+  // const [todo, setTodo] = useState("");
 
   const history = useHistory();
   const params = useParams();
@@ -54,12 +56,19 @@ const Improve = (props) => {
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>What To Improve</h3>
-          <label htmlFor="improve">Improve</label>
+          <label htmlFor="improve">What would you change?</label>
           <input
             name="improve"
             type="text"
             value={improve}
             onChange={(e) => setImprove(e.target.value)}
+            />
+            <label htmlFor="negativeEmotions">What contributed to any negative emotions?</label>
+          <input
+            name="negativeEmotions"
+            type="text"
+            value={negativeEmotions}
+            onChange={(e) => setNegativeEmotions(e.target.value)}
           />
           <button type="submit">Make Entry</button>
         </form>

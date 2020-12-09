@@ -11,6 +11,7 @@ const Highlight = (props) => {
     )
   })
   const [highlight, setHighlight] = useState("");
+  const [activities, setActivities] = useState("");
 
   const history = useHistory();
   const params = useParams();
@@ -54,12 +55,19 @@ const Highlight = (props) => {
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>Highlight</h3>
-          <label htmlFor="highlight">Highlight</label>
+          <label htmlFor="highlight">What was the highlight of your day?</label>
           <input
             name="highlight"
             type="text"
             value={highlight}
             onChange={(e) => setHighlight(e.target.value)}
+            />
+            <label htmlFor="activities">What activities contributed to your highlight?</label>
+          <input
+            name="activities"
+            type="text"
+            value={activities}
+            onChange={(e) => setActivities(e.target.value)}
           />
           <button type="submit">Make Entry</button>
         </form>

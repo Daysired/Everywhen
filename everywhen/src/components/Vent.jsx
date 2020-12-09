@@ -54,7 +54,7 @@ const Vent = (props) => {
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>VENT THAT SH*T!</h3>
-          <label htmlFor="vent">vent</label>
+          <label htmlFor="vent">Vent Away!</label>
           <input
             name="vent"
             type="text"
