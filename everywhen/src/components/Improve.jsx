@@ -30,8 +30,8 @@ const Improve = (props) => {
     };
 
     if (params.id) {
-      const ventURL = `${baseURL}/${params.id}`;
-      await axios.put(ventURL, { fields }, config);
+      const improveURL = `${baseURL}/${params.id}`;
+      await axios.put(improveURL, { fields }, config);
     } else {
       await axios.post(baseURL, { fields }, config);
     }

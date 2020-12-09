@@ -5,9 +5,9 @@ import WellnessTime from "./components/WellnessTime";
 import Mood from "./components/Mood";
 import Highlight from "./components/Highlight";
 import Vent from "./components/Vent";
-import Coping from "./components/Coping";
 import Whatworked from "./components/Whatworked";
 import Improve from "./components/Improve";
+import Coping from "./components/Coping";
 import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { baseURL, config } from "./services";
@@ -72,28 +72,28 @@ console.log(tabs.mood)
         {tabs.improve && <Improve info={info}  setToggleFetch={setToggleFetch} />}
       </Route>
 
-      <Route path='/wellness/:id'>
+      {/* <Route path='/wellness/:id'>
         <Well info={info} setToggleFetch={setToggleFetch} />
       </Route>
 
-      {/* <Route path='/mood/'>
+      <Route path='/mood/'>
         <Mood info={info}  setToggleFetch={setToggleFetch} />
-      </Route> */}
+      </Route>
 
-      {/* <Route path='/vent/'>
-        
-      </Route> */}
+      <Route path='/vent/'>
+        <Vent info={info} setToggleFetch={setToggleFetch} />
+      </Route>
 
-      {/* <Route path='/highlight/'>
-        
-      </Route> */}
+      <Route path='/highlight/'>
+        <Highlight info={info} setToggleFetch={setToggleFetch} />
+      </Route>
 
-      {/* <Route path='/whatworked/'>
-        
-      </Route> */}
+      <Route path='/whatworked/'>
+        <Whatworked info={info} setToggleFetch={setToggleFetch} /> 
+      </Route>
 
-      {/* <Route path='/improve/'>
-       
+      <Route path='/improve/'>
+        <Improve info={info} setToggleFetch={setToggleFetch} />
       </Route> */}
 
     </div>

@@ -30,13 +30,13 @@ const Highlight = (props) => {
     };
 
     if (params.id) {
-      const ventURL = `${baseURL}/${params.id}`;
-      await axios.put(ventURL, { fields }, config);
+      const highlightURL = `${baseURL}/${params.id}`;
+      await axios.put(highlightURL, { fields }, config);
     } else {
       await axios.post(baseURL, { fields }, config);
     }
     props.setToggleFetch((prev) => !prev);
-    history.push("/mood/");
+    history.push("/");
   };
 
   const [showMore, setShowMore] = useState(false)

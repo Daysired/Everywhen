@@ -31,8 +31,8 @@ const Whatworked = (props) => {
     };
 
     if (params.id) {
-      const ventURL = `${baseURL}/${params.id}`;
-      await axios.put(ventURL, { fields }, config);
+      const workURL = `${baseURL}/${params.id}`;
+      await axios.put(workURL, { fields }, config);
     } else {
       await axios.post(baseURL, { fields }, config);
     }
