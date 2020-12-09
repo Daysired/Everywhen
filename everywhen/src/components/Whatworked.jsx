@@ -5,12 +5,7 @@ import axios from "axios";
 import { baseURL, config } from "../services";
 
 const Whatworked = (props) => {
-  const myWork = props.info.map((work) => {
-    return (
-      <h3>What Worked:{work.fields.whatWorked}</h3>
-    )
-  })
-
+  
   const [whatWorked, setWhatWorked] = useState("");
   const [wentWell, setWentWell] = useState("");
   const [feelGood, setFeelGood] = useState("");
@@ -30,6 +25,8 @@ const Whatworked = (props) => {
 
     const fields = {
       whatWorked,
+      wentWell,
+      feelGood,
     };
 
     if (params.id) {
@@ -39,22 +36,12 @@ const Whatworked = (props) => {
       await axios.post(baseURL, { fields }, config);
     }
     props.setToggleFetch((prev) => !prev);
-    history.push("/");
+    history.push("/well-time");
   };
   
-  const [showMore, setShowMore] = useState(false)
-  const handleClick = (e) => {
-    setShowMore(!showMore)
-  }
 
   return (
     <div>
-      {myWork}
-
-    <button onClick={handleClick}>
-       Add Entry 
-     </button>
-      { showMore ?
         <div>
           <form onSubmit={handleSubmit}>
             <h3>What Worked</h3>
@@ -81,8 +68,8 @@ const Whatworked = (props) => {
           />
             <button type="submit">Make Entry</button>
           </form>
-        </div> : <p></p>
-      } 
+      </div>
+        
     </div>
   );
 }

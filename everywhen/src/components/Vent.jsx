@@ -5,11 +5,7 @@ import axios from "axios";
 import { baseURL, config } from "../services";
 
 const Vent = (props) => {
-  const myVent = props.info.map((release) => {
-    return (
-      <h3>Vent:{release.fields.vent}</h3>
-    )
-  })
+  
   const [vent, setVent] = useState("");
 
   const history = useHistory();
@@ -36,21 +32,12 @@ const Vent = (props) => {
       await axios.post(baseURL, { fields }, config);
     }
     props.setToggleFetch((prev) => !prev);
-    history.push("/");
+    history.push("/well-time");
   };
 
-  const [showMore, setShowMore] = useState(false)
-  const handleClick = (e) => {
-    setShowMore(!showMore)
-  }
 
   return (
     <div>
-      {myVent}
-      <button onClick={handleClick}>
-       Add Entry 
-     </button>
-      { showMore ?
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>VENT THAT SH*T!</h3>
@@ -63,8 +50,7 @@ const Vent = (props) => {
           />
           <button type="submit">Make Entry</button>
         </form>
-      </div>: <p></p>
-      }
+      </div>
     </div>
   );
 }

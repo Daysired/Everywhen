@@ -52,7 +52,7 @@ export default function FloatingActionButtons(props) {
       await axios.post(baseURL, { fields }, config);
     }
     props.setToggleFetch((prev) => !prev);
-    history.push("/");
+    history.push("/well-time");
   };
 
   return (

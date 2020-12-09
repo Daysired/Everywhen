@@ -5,11 +5,7 @@ import axios from "axios";
 import { baseURL, config } from "../services";
 
 const Improve = (props) => {
-  const myImprovement = props.info.map((fix) => {
-    return (
-      <h3>What to Improve:{fix.fields.improve}</h3>
-    )
-  })
+  
   const [improve, setImprove] = useState("");
   const [negativeEmotions, setNegativeEmotions] = useState("");
   // const [todo, setTodo] = useState("");
@@ -29,6 +25,7 @@ const Improve = (props) => {
 
     const fields = {
       improve,
+      negativeEmotions,
     };
 
     if (params.id) {
@@ -38,21 +35,12 @@ const Improve = (props) => {
       await axios.post(baseURL, { fields }, config);
     }
     props.setToggleFetch((prev) => !prev);
-    history.push("/");
+    history.push("/well-time");
   };
-  
-  const [showMore, setShowMore] = useState(false)
-  const handleClick = (e) => {
-    setShowMore(!showMore)
-  }
+
 
   return (
     <div>
-      {myImprovement}
-      <button onClick={handleClick}>
-       Add Entry 
-     </button>
-      { showMore ?
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>What To Improve</h3>
@@ -72,8 +60,7 @@ const Improve = (props) => {
           />
           <button type="submit">Make Entry</button>
         </form>
-      </div>: <p></p>
-      }
+      </div>
     </div>
   );
 }

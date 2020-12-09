@@ -5,11 +5,7 @@ import axios from "axios";
 import { baseURL, config } from "../services";
 
 const Highlight = (props) => {
-  const myHighlight = props.info.map((high) => {
-    return (
-      <h3>Highlight:{high.fields.highlight}</h3>
-    )
-  })
+  
   const [highlight, setHighlight] = useState("");
   const [activities, setActivities] = useState("");
 
@@ -28,6 +24,7 @@ const Highlight = (props) => {
 
     const fields = {
       highlight,
+      activities,
     };
 
     if (params.id) {
@@ -37,21 +34,11 @@ const Highlight = (props) => {
       await axios.post(baseURL, { fields }, config);
     }
     props.setToggleFetch((prev) => !prev);
-    history.push("/");
+    history.push("/well-time");
   };
-
-  const [showMore, setShowMore] = useState(false)
-  const handleClick = (e) => {
-    setShowMore(!showMore)
-  }
 
   return (
     <div>
-      {myHighlight}
-      <button onClick={handleClick}>
-       Add Entry 
-     </button>
-      { showMore ?
       <div Class="card">
         <form onSubmit={handleSubmit}>
         <h3>Highlight</h3>
@@ -71,8 +58,7 @@ const Highlight = (props) => {
           />
           <button type="submit">Make Entry</button>
         </form>
-      </div>: <p></p>
-      }
+      </div>
     </div>
   );
 }
