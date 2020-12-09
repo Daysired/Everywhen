@@ -16,6 +16,13 @@ import './App.css';
 function App() {
   const [info, setInfo] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const [tabs, setTabs] = useState({
+    mood: true,
+    vent: false,
+    highlight: false,
+    whatworked: false,
+    improve: false,
+  })
   
     useEffect(() => {
         async function getWellnessTime() {
@@ -26,7 +33,22 @@ function App() {
         }
         getWellnessTime();
     }, [toggleFetch]);
-
+  
+  let handleClick = (tabName) => {
+    setTabs ({
+      mood: false,
+      vent: false,
+      highlight: false,
+      whatworked: false,
+      improve: false,
+    })
+    console.log(tabs[tabName])
+    setTabs(prevTabs => ({
+      ...prevTabs,
+      [tabName]:!tabs[tabName]
+    }))
+  }
+console.log(tabs.mood)
   return (
     <div className="App">
       <Nav />
@@ -35,33 +57,44 @@ function App() {
       </Route>
       <Route path='/well-time'>
         {info.map((wellnessTime) => (
-          <WellnessTime wellnessTime={wellnessTime} key={wellnessTime.id} setToggleFetch={setToggleFetch} />
+          <WellnessTime
+            wellnessTime={wellnessTime}
+            key={wellnessTime.id}
+            setToggleFetch={setToggleFetch}
+            handleClick={handleClick}
+          />
         ))}
+       
+        {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} />}
+        {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} />}
+        {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} />}
+        {tabs.whatworked && <Whatworked info={info} setToggleFetch={setToggleFetch} />}
+        {tabs.improve && <Improve info={info}  setToggleFetch={setToggleFetch} />}
       </Route>
 
       <Route path='/wellness/:id'>
         <Well info={info} setToggleFetch={setToggleFetch} />
       </Route>
 
-      <Route path='/mood/'>
+      {/* <Route path='/mood/'>
         <Mood info={info}  setToggleFetch={setToggleFetch} />
-      </Route>
+      </Route> */}
 
-      <Route path='/vent/'>
-        <Vent info={info}  setToggleFetch={setToggleFetch} />
-      </Route>
+      {/* <Route path='/vent/'>
+        
+      </Route> */}
 
-      <Route path='/highlight/'>
-        <Highlight info={info}  setToggleFetch={setToggleFetch} />
-      </Route>
+      {/* <Route path='/highlight/'>
+        
+      </Route> */}
 
-      <Route path='/whatworked/'>
-        <Whatworked info={info} setToggleFetch={setToggleFetch} />
-      </Route>
+      {/* <Route path='/whatworked/'>
+        
+      </Route> */}
 
-      <Route path='/improve/'>
-        <Improve info={info}  setToggleFetch={setToggleFetch} />
-      </Route>
+      {/* <Route path='/improve/'>
+       
+      </Route> */}
 
     </div>
   );

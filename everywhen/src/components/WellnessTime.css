@@ -1,0 +1,11 @@
+.tabs {
+  display: flex;
+  border: solid black;
+  background-color:#f50057;
+  justify-content: space-around;
+  width: 700px;
+}
+
+h4 {
+  color:white;
+}

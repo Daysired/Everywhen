@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  justify-content: center;
+}
+
+nav {
+  background-color: pink;
+}
+
+.styleLink {
+  color: black;
+  float: right;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  justify-content: space-around;
 }
 
 
