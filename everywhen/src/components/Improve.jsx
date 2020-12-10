@@ -8,7 +8,6 @@ const Improve = (props) => {
   
   const [improve, setImprove] = useState("");
   const [negativeEmotions, setNegativeEmotions] = useState("");
-  // const [todo, setTodo] = useState("");
 
   const history = useHistory();
   const params = useParams();

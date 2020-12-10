@@ -18,6 +18,7 @@ function App(props) {
 
   const [info, setInfo] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  // const []
   const [tabs, setTabs] = useState({
     mood: true,
     vent: false,

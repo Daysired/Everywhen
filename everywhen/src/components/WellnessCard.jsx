@@ -8,22 +8,25 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { baseURL, config } from "../services";
-import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
-import SentimentDissatisfiedIcon from "@material-ui/icons/SentimentDissatisfied";
-import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt";
-import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
-import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
-
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
+import { createMuiTheme } from '@material-ui/core/styles';
+import pink from '@material-ui/core/colors/pink';
 
 const useStyles = makeStyles((theme) => ({
+  palette: {
+    primary: {
+      main: pink[500],
+    },
+    secondary: {
+      main: '#f44336',
+    },
+  },
   root: {
     maxWidth: 345,
   },
@@ -41,10 +44,21 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  avatar: {
-    backgroundColor: red[500],
-  },
+  // avatar: {
+  //   backgroundColor: red[500],
+  // },
 }));
+
+// const theme = createMuiTheme({
+//   palette: {
+//     primary: {
+//       main: pink[500],
+//     },
+//     secondary: {
+//       main: '#f44336',
+//     },
+//   },
+// });
 
 const WellnessCard = (props) => {
 
@@ -77,11 +91,11 @@ console.log(props.cardInfo)
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
-          </Avatar>
-        }
+        // avatar={
+        //   <Avatar aria-label="recipe" className={classes.avatar}>
+        //     R
+        //   </Avatar>
+        // }
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
@@ -102,10 +116,19 @@ console.log(props.cardInfo)
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <button onClick={handleDelete}>Delete</button>
+    
+      {/* <Button
+        variant="contained"
+        color="secondary"
+        className={classes.button}
+        startIcon={<DeleteIcon />}
+        onClick={handleDelete}
+      >
+        </Button> */}
+        
+      <IconButton color="secondary"  size="large" onClick={handleDelete}>
+      <DeleteIcon />
+      </IconButton>
 
         <IconButton
           className={clsx(classes.expand, {

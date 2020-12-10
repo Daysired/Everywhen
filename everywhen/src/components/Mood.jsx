@@ -27,7 +27,6 @@ export default function FloatingActionButtons(props) {
   const classes = useStyles();
   const [date, setDate] = useState("");
   const [mood, setMood] = useState("");
-  const [img, setImg] = useState("");
 
   const history = useHistory();
   const params = useParams();
@@ -73,7 +72,7 @@ export default function FloatingActionButtons(props) {
       </form>
       
       <span onClick={() => setMood("dissatisfied")}>
-      <Fab color="secondary">
+      <Fab size="large" color="secondary">
         <SentimentDissatisfiedIcon />
       </Fab>
       </span>
