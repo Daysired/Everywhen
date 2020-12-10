@@ -93,7 +93,7 @@ export default function FloatingActionButtons(props) {
         </span>
         {/* <button type="submit">Make Entry</button> */}
         <Button type="submit" variant="contained" color="primary" size="small">
-       Make Entry
+       Next
       </Button>
       </form>
     </div>

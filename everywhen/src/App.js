@@ -1,11 +1,6 @@
 import axios from "axios";
 import Nav from "./components/Nav";
 import WellnessTime from "./components/WellnessTime";
-import Mood from "./components/Mood";
-import Highlight from "./components/Highlight";
-import Vent from "./components/Vent";
-import Whatworked from "./components/Whatworked";
-import Improve from "./components/Improve";
 import WellnessCard from "./components/WellnessCard"
 import { Route, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -49,18 +44,19 @@ function App(props) {
     history.push("/well-card")
   }
  
-  const [tabs, setTabs] = useState({
-    mood: false,
-    vent: false,
-    highlight: false,
-    whatWorked: false,
-    improve: false,
-  })
+  // const [tabs, setTabs] = useState({
+  //   mood: false,
+  //   vent: false,
+  //   highlight: false,
+  //   whatWorked: false,
+  //   improve: false,
+  // })
   
     useEffect(() => {
         async function getWellnessTime() {
-            let response = await axios.get(baseURL, config);
-          setInfo(response.data.records);
+          let response = await axios.get(baseURL, config);
+          let sortedInfo = response.data.records.sort((card1, card2) => Date.parse(card2.createdTime) - Date.parse(card1.createdTime))
+          setInfo(sortedInfo);
           console.log(response)
           
         }
@@ -118,33 +114,6 @@ function App(props) {
         ))}
         
       </Route>
-
-
-      {/* <Route path='/wellness/:id'>
-        <Well info={info} setToggleFetch={setToggleFetch} />
-      </Route>
-
-      <Route path='/mood/'>
-        <Mood info={info}  setToggleFetch={setToggleFetch} />
-      </Route>
-
-      <Route path='/vent/'>
-        <Vent info={info} setToggleFetch={setToggleFetch} />
-      </Route>
-
-      <Route path='/highlight/'>
-        <Highlight info={info} setToggleFetch={setToggleFetch} />
-      </Route>
-
-      <Route path='/whatworked/'>
-        <Whatworked info={info} setToggleFetch={setToggleFetch} /> 
-      </Route>
-
-      <Route path='/improve/'>
-        <Improve info={info} setToggleFetch={setToggleFetch} />
-      </Route> */}
-
-      
 
     </div>
   );

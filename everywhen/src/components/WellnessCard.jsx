@@ -73,7 +73,9 @@ const WellnessCard = (props) => {
   }
   useEffect(() => {
     setEmoji(emojis[props.cardInfo.fields.mood])
-  },[])
+  }, [])
+  console.log(props.cardInfo.createdTime)
+  console.log(Date.parse(props.cardInfo.createdTime))
 
   const handleExpandClick = () => {
     setExpanded(!expanded);

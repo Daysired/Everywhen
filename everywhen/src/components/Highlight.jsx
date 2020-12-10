@@ -77,7 +77,7 @@ const Highlight = (props) => {
             variant="contained"
             color="primary"
             size="small">
-            Make Entry
+            Next
             </Button>
         </form>
       </div>
