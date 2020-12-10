@@ -23,6 +23,7 @@ const Improve = (props) => {
 
     props.handleWellTime("improve", improve)
     props.handleWellTime("negativeEmotions", negativeEmotions)
+    props.submitWellTime(improve, negativeEmotions)
 
     
   };
