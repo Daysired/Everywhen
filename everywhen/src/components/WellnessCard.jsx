@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -16,6 +16,12 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { baseURL, config } from "../services";
+import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
+import SentimentDissatisfiedIcon from "@material-ui/icons/SentimentDissatisfied";
+import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt";
+import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
+import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +49,19 @@ const useStyles = makeStyles((theme) => ({
 const WellnessCard = (props) => {
 
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [emoji, setEmoji] = useState("");
+  const emojis = {
+    dissatisfied: "https://i.pinimg.com/originals/da/8c/21/da8c2163061be58d770f6f9af78258e8.png",
+    satisfied: "",
+    satisfiedv: "",
+    verysatisfied: "",
+    verydissatisfied: "",
+    
+  }
+  useEffect(() => {
+    setEmoji(emojis[props.cardInfo.fields.mood])
+  },[])
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -55,7 +73,7 @@ const WellnessCard = (props) => {
     props.setToggleFetch((prev) => !prev);
   };
 
-
+console.log(props.cardInfo)
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -71,11 +89,12 @@ const WellnessCard = (props) => {
         }
         title="WellnessCard"
         subheader={props.cardInfo.fields.date}
+
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Paella dish"
+        image={emoji}
+        title="emoji"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">

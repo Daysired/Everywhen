@@ -27,6 +27,7 @@ export default function FloatingActionButtons(props) {
   const classes = useStyles();
   const [date, setDate] = useState("");
   const [mood, setMood] = useState("");
+  const [img, setImg] = useState("");
 
   const history = useHistory();
   const params = useParams();
