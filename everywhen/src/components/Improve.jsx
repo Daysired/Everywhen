@@ -21,9 +21,7 @@ const Improve = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // props.handleWellTime("improve", improve)
-    // props.handleWellTime("negativeEmotions", negativeEmotions)
+    
     props.submitWellTime(improve, negativeEmotions);
   };
 

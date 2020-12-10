@@ -43,14 +43,6 @@ function App(props) {
     setToggleFetch(!toggleFetch)
     history.push("/well-card")
   }
- 
-  // const [tabs, setTabs] = useState({
-  //   mood: false,
-  //   vent: false,
-  //   highlight: false,
-  //   whatWorked: false,
-  //   improve: false,
-  // })
   
     useEffect(() => {
         async function getWellnessTime() {
@@ -68,21 +60,7 @@ function App(props) {
       setSelectedTab(num + 1);
     }
   
-  // let handleClick = (tabName) => {
-  //   setTabs ({
-  //     mood: false,
-  //     vent: false,
-  //     highlight: false,
-  //     whatWorked: false,
-  //     improve: false,
-  //   })
-  //   console.log(tabs[tabName])
-  //   setTabs(prevTabs => ({
-  //     ...prevTabs,
-  //     [tabName]:!tabs[tabName]
-  //   }))
-  // }
-// console.log(tabs.mood)
+  
   return (
     <div className="App">
       <Nav />
@@ -91,21 +69,12 @@ function App(props) {
       </Route>
       <Route path='/well-time'>
         <WellnessTime
-          // wellnessTime={wellnessTime}
           setToggleFetch={setToggleFetch}
           handleClick={handleClick}
           handleWellTime={handleWellTime}
           submitWellTime={submitWellTime}
           selectedTab={selectedTab}
           />
-      
-      {/* tabs.mood && */}
-        {/* {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
-        {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
-        {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
-        {tabs.whatWorked && <Whatworked info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
-        {tabs.improve && <Improve info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} submitWellTime={submitWellTime}/>}
-         */}
       </Route>
 
       <Route path="/well-card">

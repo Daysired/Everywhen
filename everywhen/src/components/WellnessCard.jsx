@@ -47,17 +47,6 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       main: pink[500],
-//     },
-//     secondary: {
-//       main: '#f44336',
-//     },
-//   },
-// });
-
 const WellnessCard = (props) => {
 
   const classes = useStyles();
@@ -112,15 +101,6 @@ console.log(props.cardInfo)
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-    
-      {/* <Button
-        variant="contained"
-        color="secondary"
-        className={classes.button}
-        startIcon={<DeleteIcon />}
-        onClick={handleDelete}
-      >
-        </Button> */}
         
       <IconButton color="secondary"  size="large" onClick={handleDelete}>
       <DeleteIcon />
