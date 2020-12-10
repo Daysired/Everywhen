@@ -50,7 +50,7 @@ function App(props) {
     mood: true,
     vent: false,
     highlight: false,
-    whatworked: false,
+    whatWorked: false,
     improve: false,
   })
   

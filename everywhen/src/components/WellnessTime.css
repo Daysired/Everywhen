@@ -3,7 +3,13 @@
   border: solid black;
   background-color:#f50057;
   justify-content: space-around;
-  
+  margin-top: 5%;
+}
+
+.styleLink {
+  display: inline;
+  justify-content: space-around;
+  text-align: right;
 }
 
 h4 {

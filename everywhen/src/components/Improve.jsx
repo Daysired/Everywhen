@@ -21,8 +21,8 @@ const Improve = (props) => {
     e.preventDefault();
 
 
-    props.handleWellTime("improve", improve)
-    props.handleWellTime("negativeEmotions", negativeEmotions)
+    // props.handleWellTime("improve", improve)
+    // props.handleWellTime("negativeEmotions", negativeEmotions)
     props.submitWellTime(improve, negativeEmotions)
 
     
@@ -48,11 +48,11 @@ const Improve = (props) => {
             value={negativeEmotions}
             onChange={(e) => setNegativeEmotions(e.target.value)}
           />
-          <button onClick={handleSubmit} type="submit">Make Entry</button>
+          <button onClick={handleSubmit} type="submit">Submit</button>
 
-          <button onClick={props.submitWellTime}>
+          {/* <button onClick={props.submitWellTime}>
            Submit 
-          </button>
+          </button> */}
         </form>
       </div>
     </div>
