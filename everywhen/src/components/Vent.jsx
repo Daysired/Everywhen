@@ -21,21 +21,11 @@ const Vent = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const fields = {
-      vent,
-    };
 
     props.handleWellTime("vent", vent)
+    props.handleClick("whatWorked")
     
 
-  //   if (params.id) {
-  //     const ventURL = `${baseURL}/${params.id}`;
-  //     await axios.put(ventURL, { fields }, config);
-  //   } else {
-  //     await axios.post(baseURL, { fields }, config);
-  //   }
-  //   props.setToggleFetch((prev) => !prev);
-  //   history.push("/well-time");
   };
 
 

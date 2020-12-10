@@ -22,20 +22,11 @@ const Highlight = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const fields = {
-      highlight,
-      activities,
-    };
+   
     props.handleWellTime("highlight", highlight)
-    props.handleWellTime("activities",activities)
-  //   if (params.id) {
-  //     const highlightURL = `${baseURL}/${params.id}`;
-  //     await axios.put(highlightURL, { fields }, config);
-  //   } else {
-  //     await axios.post(baseURL, { fields }, config);
-  //   }
-  //   props.setToggleFetch((prev) => !prev);
-  //   history.push("/well-time");
+    props.handleWellTime("activities", activities)
+    props.handleClick("vent")
+  
   };
 
   return (

@@ -91,9 +91,9 @@ console.log(tabs.mood)
       
        
         {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
-        {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}/>}
-        {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}/>}
-        {tabs.whatworked && <Whatworked info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}/>}
+        {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}handleClick={handleClick}/>}
+        {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}handleClick={handleClick}/>}
+        {tabs.whatworked && <Whatworked info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}handleClick={handleClick}/>}
         {tabs.improve && <Improve info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} submitWellTime={submitWellTime}/>}
         
       </Route>

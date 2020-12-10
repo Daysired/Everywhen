@@ -23,23 +23,13 @@ const Whatworked = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const fields = {
-      whatWorked,
-      wentWell,
-      feelGood,
-    };
+    
     props.handleWellTime("whatWorked", whatWorked)
     props.handleWellTime("wentWell", wentWell)
     props.handleWellTime("feelGood", feelGood)
+    props.handleClick("improve")
     
-    // if (params.id) {
-    //   const workURL = `${baseURL}/${params.id}`;
-    //   await axios.put(workURL, { fields }, config);
-    // } else {
-    //   await axios.post(baseURL, { fields }, config);
-    // }
-    // props.setToggleFetch((prev) => !prev);
-    // history.push("/well-time");
+  
   };
   
 

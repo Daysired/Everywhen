@@ -22,10 +22,10 @@ const Improve = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const fields = {
-      improve,
-      negativeEmotions,
-    };
+    // const fields = {
+    //   improve,
+    //   negativeEmotions,
+    // };
 
     props.handleWellTime("improve", improve)
     props.handleWellTime("negativeEmotions", negativeEmotions)
