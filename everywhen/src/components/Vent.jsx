@@ -25,14 +25,17 @@ const Vent = (props) => {
       vent,
     };
 
-    if (params.id) {
-      const ventURL = `${baseURL}/${params.id}`;
-      await axios.put(ventURL, { fields }, config);
-    } else {
-      await axios.post(baseURL, { fields }, config);
-    }
-    props.setToggleFetch((prev) => !prev);
-    history.push("/well-time");
+    props.handleWellTime("vent", vent)
+    
+
+  //   if (params.id) {
+  //     const ventURL = `${baseURL}/${params.id}`;
+  //     await axios.put(ventURL, { fields }, config);
+  //   } else {
+  //     await axios.post(baseURL, { fields }, config);
+  //   }
+  //   props.setToggleFetch((prev) => !prev);
+  //   history.push("/well-time");
   };
 
 

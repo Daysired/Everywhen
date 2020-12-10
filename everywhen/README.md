@@ -20,7 +20,7 @@ https://i.imgur.com/18o6EfW.png
 
 ## API and Data Sample
 
-```json
+```js
 {
   
 records: Array(5)

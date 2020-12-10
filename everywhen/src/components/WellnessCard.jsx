@@ -157,7 +157,7 @@ console.log(props.cardInfo)
           </Typography>
           <Typography paragraph>
             <p>What Worked</p>
-            <p>What are you proud of?{props.cardInfo.fields.Whatworked}</p>
+            <p>What are you proud of?{props.cardInfo.fields.whatWorked}</p>
             <p>What went well?{props.cardInfo.fields.wentWell}</p>
             <p>What made you feel good?{props.cardInfo.fields.feelGood}</p>
           </Typography>

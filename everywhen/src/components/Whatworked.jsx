@@ -28,15 +28,18 @@ const Whatworked = (props) => {
       wentWell,
       feelGood,
     };
-
-    if (params.id) {
-      const workURL = `${baseURL}/${params.id}`;
-      await axios.put(workURL, { fields }, config);
-    } else {
-      await axios.post(baseURL, { fields }, config);
-    }
-    props.setToggleFetch((prev) => !prev);
-    history.push("/well-time");
+    props.handleWellTime("whatWorked", whatWorked)
+    props.handleWellTime("wentWell", wentWell)
+    props.handleWellTime("feelGood", feelGood)
+    
+    // if (params.id) {
+    //   const workURL = `${baseURL}/${params.id}`;
+    //   await axios.put(workURL, { fields }, config);
+    // } else {
+    //   await axios.post(baseURL, { fields }, config);
+    // }
+    // props.setToggleFetch((prev) => !prev);
+    // history.push("/well-time");
   };
   
 

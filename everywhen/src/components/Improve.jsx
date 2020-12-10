@@ -27,14 +27,17 @@ const Improve = (props) => {
       negativeEmotions,
     };
 
-    if (params.id) {
-      const improveURL = `${baseURL}/${params.id}`;
-      await axios.put(improveURL, { fields }, config);
-    } else {
-      await axios.post(baseURL, { fields }, config);
-    }
-    props.setToggleFetch((prev) => !prev);
-    history.push("/well-time");
+    props.handleWellTime("improve", improve)
+    props.handleWellTime("negativeEmotions", negativeEmotions)
+
+    // if (params.id) {
+    //   const improveURL = `${baseURL}/${params.id}`;
+    //   await axios.put(improveURL, { fields }, config);
+    // } else {
+    //   await axios.post(baseURL, { fields }, config);
+    // }
+    // props.setToggleFetch((prev) => !prev);
+    // history.push("/well-time");
   };
 
 
@@ -57,7 +60,11 @@ const Improve = (props) => {
             value={negativeEmotions}
             onChange={(e) => setNegativeEmotions(e.target.value)}
           />
-          <button type="submit">Make Entry</button>
+          <button onClick={handleSubmit} type="submit">Make Entry</button>
+
+          <button onClick={props.submitWellTime}>
+           Submit 
+          </button>
         </form>
       </div>
     </div>

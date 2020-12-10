@@ -1,8 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import axios from "axios";
-import { baseURL, config } from "../services";
 import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
@@ -43,19 +41,11 @@ export default function FloatingActionButtons(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const fields = {
-      date,
-      mood,
-    };
-
-    if (params.id) {
-      const dateURL = `${baseURL}/${params.id}`;
-      await axios.put(dateURL, { fields }, config);
-    } else {
-      await axios.post(baseURL, { fields }, config);
-    }
-    props.setToggleFetch((prev) => !prev);
-    history.push("/well-time");
+  
+    props.handleWellTime("date", date)
+    props.handleWellTime("mood", mood)
+    props.handleClick("highlight")
+  
   };
 
   return (

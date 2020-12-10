@@ -18,7 +18,31 @@ function App(props) {
 
   const [info, setInfo] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
-  // const []
+  const [wellTime, setWellTime] = useState({
+    mood: "",
+    date: "",
+    highlight: "",
+    activities: "",
+    vent: "",
+    whatWorked: "",
+    wentWell: "",
+    feelGood: "",
+    improve: "",
+    negativeEmotions: "",
+  })
+
+  const handleWellTime = (type, str) => {
+    setWellTime(prevState => ({
+      ...prevState, 
+      [type]: str
+    })) 
+  }
+
+  const submitWellTime = async () => {
+    let response = await axios.post(baseURL, {fields:wellTime}, config)
+    console.log(response.data)
+  }
+ 
   const [tabs, setTabs] = useState({
     mood: true,
     vent: false,
@@ -66,11 +90,11 @@ console.log(tabs.mood)
           />
       
        
-        {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} />}
-        {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} />}
-        {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} />}
-        {tabs.whatworked && <Whatworked info={info} setToggleFetch={setToggleFetch} />}
-        {tabs.improve && <Improve info={info} setToggleFetch={setToggleFetch} />}
+        {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
+        {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}/>}
+        {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}/>}
+        {tabs.whatworked && <Whatworked info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime}/>}
+        {tabs.improve && <Improve info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} submitWellTime={submitWellTime}/>}
         
       </Route>
 
