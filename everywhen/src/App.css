@@ -2,32 +2,44 @@
   text-align: center;
   /* justify-content: center; */
 }
-/* 
-h3{
-  color: black;
-}
 
-h4{
-  color: black;
-}
-
-h5{
-  color: black;
+/* .nav Link {
+  float: right;
 } */
 
-/* nav {
-  background-color: pink;
-}
+/* .links {
+  float: right;
+  color: white;
+  text-decoration: none;
+} */
 
 .styleLink {
-  color: black;
-  float: right;
-  display: block;
-  text-align: center;
+  display: inline;
+  color: white;
   text-decoration: none;
-  justify-content: space-around;
-} */
+  /* float: right; */
+  margin-left: 5%;
+  font-size: 15px;
+}
 
+.everywhen {
+margin-right: 20%;
+}
+
+
+/* .styleLink2 {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  
+}
+.styleLink3 {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

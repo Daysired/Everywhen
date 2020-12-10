@@ -7,15 +7,17 @@ import Vent from "./components/Vent";
 import Whatworked from "./components/Whatworked";
 import Improve from "./components/Improve";
 import WellnessCard from "./components/WellnessCard"
-import { Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { baseURL, config } from "./services";
+import { baseURL, config } from "./services"
 import './App.css';
 
 function App(props) {
 
+  const history = useHistory()
   const [info, setInfo] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const [selectedTab, setSelectedTab] = useState(0);
   const [wellTime, setWellTime] = useState({
     mood: "",
     date: "",
@@ -42,12 +44,13 @@ function App(props) {
       improve: improve, 
       negativeEmotions: negativeEmotions
     }
-    let response = await axios.post(baseURL, {fields:fields}, config)
-    console.log(response.data)
+    let response = await axios.post(baseURL, { fields: fields }, config)
+    setToggleFetch(!toggleFetch)
+    history.push("/well-card")
   }
  
   const [tabs, setTabs] = useState({
-    mood: true,
+    mood: false,
     vent: false,
     highlight: false,
     whatWorked: false,
@@ -64,21 +67,26 @@ function App(props) {
         getWellnessTime();
     }, [toggleFetch]);
   
-  let handleClick = (tabName) => {
-    setTabs ({
-      mood: false,
-      vent: false,
-      highlight: false,
-      whatWorked: false,
-      improve: false,
-    })
-    console.log(tabs[tabName])
-    setTabs(prevTabs => ({
-      ...prevTabs,
-      [tabName]:!tabs[tabName]
-    }))
-  }
-console.log(tabs.mood)
+  const handleClick = () => {
+      let num = selectedTab
+      setSelectedTab(num + 1);
+    }
+  
+  // let handleClick = (tabName) => {
+  //   setTabs ({
+  //     mood: false,
+  //     vent: false,
+  //     highlight: false,
+  //     whatWorked: false,
+  //     improve: false,
+  //   })
+  //   console.log(tabs[tabName])
+  //   setTabs(prevTabs => ({
+  //     ...prevTabs,
+  //     [tabName]:!tabs[tabName]
+  //   }))
+  // }
+// console.log(tabs.mood)
   return (
     <div className="App">
       <Nav />
@@ -86,19 +94,22 @@ console.log(tabs.mood)
         <h1>hiiii</h1>
       </Route>
       <Route path='/well-time'>
-          <WellnessTime
-            // wellnessTime={wellnessTime}
-            setToggleFetch={setToggleFetch}
-            handleClick={handleClick}
+        <WellnessTime
+          // wellnessTime={wellnessTime}
+          setToggleFetch={setToggleFetch}
+          handleClick={handleClick}
+          handleWellTime={handleWellTime}
+          submitWellTime={submitWellTime}
+          selectedTab={selectedTab}
           />
       
-       
-        {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
+      {/* tabs.mood && */}
+        {/* {tabs.mood && <Mood info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
         {tabs.vent && <Vent info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
         {tabs.highlight && <Highlight info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
         {tabs.whatWorked && <Whatworked info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} handleClick={handleClick}/>}
         {tabs.improve && <Improve info={info} setToggleFetch={setToggleFetch} handleWellTime={handleWellTime} submitWellTime={submitWellTime}/>}
-        
+         */}
       </Route>
 
       <Route path="/well-card">

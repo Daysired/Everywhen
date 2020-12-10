@@ -87,7 +87,7 @@ const WellnessCard = (props) => {
 
 console.log(props.cardInfo)
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} color="secondary">
       <CardHeader
        
         action={

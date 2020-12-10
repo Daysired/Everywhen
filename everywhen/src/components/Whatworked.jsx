@@ -1,20 +1,21 @@
-import React from 'react';
+import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 const Whatworked = (props) => {
-  
   const [whatWorked, setWhatWorked] = useState("");
   const [wentWell, setWentWell] = useState("");
   const [feelGood, setFeelGood] = useState("");
 
-  
   const params = useParams();
 
   useEffect(() => {
     if (params.id && props.wellnesTime.length > 0) {
-      const wellnessTime = props.wellnessTime.find((wellnessTime) => wellnessTime.id === params.id);
+      const wellnessTime = props.wellnessTime.find(
+        (wellnessTime) => wellnessTime.id === params.id
+      );
       setWhatWorked(wellnessTime.fields.whatWorked);
     }
   }, [props.wellnessTime, params.id]);
@@ -22,29 +23,25 @@ const Whatworked = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    
-    props.handleWellTime("whatWorked", whatWorked)
-    props.handleWellTime("wentWell", wentWell)
-    props.handleWellTime("feelGood", feelGood)
-    props.handleClick("improve")
-    
-  
+    props.handleWellTime("whatWorked", whatWorked);
+    props.handleWellTime("wentWell", wentWell);
+    props.handleWellTime("feelGood", feelGood);
+    props.handleClick("improve");
   };
-  
 
   return (
     <div>
-        <div>
-          <form onSubmit={handleSubmit}>
-            <h3>What Worked</h3>
-            <label htmlFor="whatworked">What are you proud of?</label>
-            <input
-              name="whatworked"
-              type="text"
-              value={whatWorked}
-              onChange={(e) => setWhatWorked(e.target.value)}
-            />
-            <label htmlFor="wentWell">What went well?</label>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <h3>What Worked</h3>
+          <label htmlFor="whatworked">What are you proud of?</label>
+          <input
+            name="whatworked"
+            type="text"
+            value={whatWorked}
+            onChange={(e) => setWhatWorked(e.target.value)}
+          />
+          <label htmlFor="wentWell">What went well?</label>
           <input
             name="wentWell"
             type="text"
@@ -58,13 +55,18 @@ const Whatworked = (props) => {
             value={feelGood}
             onChange={(e) => setFeelGood(e.target.value)}
           />
-            <button type="submit">Make Entry</button>
-          </form>
+          {/* <button type="submit">Make Entry</button> */}
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            size="small">
+            Make Entry
+            </Button>
+        </form>
       </div>
-        
     </div>
   );
-}
-
+};
 
 export default Whatworked;

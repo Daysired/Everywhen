@@ -7,15 +7,15 @@ function Nav() {
   return (
     <div>
       <div>
-      <AppBar position="static" color="secondary">
+      <AppBar position="static" color="secondary" className="nav">
         <Toolbar>
-          <Typography variant="h3">
+          <Typography variant="h3" className="everywhen">
               Everywhen
           </Typography>
-            <Typography variant= "h6">
-              <Link className="styleLink" to="/well-card">WellnessCard</Link>
-              <Link className="styleLink" to="/well-time">WellnessTime</Link>
+            <Typography className="links">
               <Link className="styleLink" to="/">Home</Link> 
+              <Link className="styleLink" to="/well-time">WellnessTime</Link>
+              <Link className="styleLink" to="/well-card">WellnessCard</Link>
           </Typography>
         </Toolbar>
       </AppBar>
