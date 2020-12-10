@@ -1,8 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import axios from "axios";
-import { baseURL, config } from "../services";
+import { useParams } from "react-router-dom";
+
 
 const Whatworked = (props) => {
   
@@ -10,7 +9,7 @@ const Whatworked = (props) => {
   const [wentWell, setWentWell] = useState("");
   const [feelGood, setFeelGood] = useState("");
 
-  const history = useHistory();
+  
   const params = useParams();
 
   useEffect(() => {

@@ -1,15 +1,13 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import axios from "axios";
-import { baseURL, config } from "../services";
+import { useParams } from "react-router-dom";
+
 
 const Highlight = (props) => {
   
   const [highlight, setHighlight] = useState("");
   const [activities, setActivities] = useState("");
 
-  const history = useHistory();
   const params = useParams();
 
   useEffect(() => {

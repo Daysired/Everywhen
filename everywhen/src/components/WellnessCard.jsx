@@ -44,9 +44,7 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  // avatar: {
-  //   backgroundColor: red[500],
-  // },
+  
 }));
 
 // const theme = createMuiTheme({
@@ -91,11 +89,7 @@ console.log(props.cardInfo)
   return (
     <Card className={classes.root}>
       <CardHeader
-        // avatar={
-        //   <Avatar aria-label="recipe" className={classes.avatar}>
-        //     R
-        //   </Avatar>
-        // }
+       
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />

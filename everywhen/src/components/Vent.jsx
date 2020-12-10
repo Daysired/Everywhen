@@ -1,14 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import axios from "axios";
-import { baseURL, config } from "../services";
+import { useParams } from "react-router-dom";
+
 
 const Vent = (props) => {
   
   const [vent, setVent] = useState("");
 
-  const history = useHistory();
   const params = useParams();
 
   useEffect(() => {

@@ -1,15 +1,13 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import axios from "axios";
-import { baseURL, config } from "../services";
+import { useParams } from "react-router-dom";
+
 
 const Improve = (props) => {
   
   const [improve, setImprove] = useState("");
   const [negativeEmotions, setNegativeEmotions] = useState("");
 
-  const history = useHistory();
   const params = useParams();
 
   useEffect(() => {
@@ -22,22 +20,11 @@ const Improve = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // const fields = {
-    //   improve,
-    //   negativeEmotions,
-    // };
 
     props.handleWellTime("improve", improve)
     props.handleWellTime("negativeEmotions", negativeEmotions)
 
-    // if (params.id) {
-    //   const improveURL = `${baseURL}/${params.id}`;
-    //   await axios.put(improveURL, { fields }, config);
-    // } else {
-    //   await axios.post(baseURL, { fields }, config);
-    // }
-    // props.setToggleFetch((prev) => !prev);
-    // history.push("/well-time");
+    
   };
 
 

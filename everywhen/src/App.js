@@ -1,13 +1,11 @@
 import axios from "axios";
 import Nav from "./components/Nav";
-import Well from "./components/Well";
 import WellnessTime from "./components/WellnessTime";
 import Mood from "./components/Mood";
 import Highlight from "./components/Highlight";
 import Vent from "./components/Vent";
 import Whatworked from "./components/Whatworked";
 import Improve from "./components/Improve";
-import Date from "./components/Date";
 import WellnessCard from "./components/WellnessCard"
 import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
