@@ -56,7 +56,7 @@ console.log(tabs.mood)
     <div className="App">
       <Nav />
       <Route exact path="/">
-
+        <h1>hiiii</h1>
       </Route>
       <Route path='/well-time'>
           <WellnessTime
