@@ -64,9 +64,6 @@ function App(props) {
   return (
     <div className="App">
       <Nav />
-      {/* <Route exact path="/">
-        <h1>hiiii</h1> */}
-      {/* </Route> */}
       <Route exact path="/">
         <WellnessTime
           setToggleFetch={setToggleFetch}

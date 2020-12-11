@@ -1,0 +1,9 @@
+body {
+background-color:rgb(185, 211, 245);
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 10px;
+  }
+}

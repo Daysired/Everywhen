@@ -17,19 +17,21 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import "./WellnessCard.css";
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((pink) => ({
   root: {
     maxWidth: 275,
+   
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
+  
   expand: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
+    transition: pink.transitions.create('transform', {
+      duration: pink.transitions.duration.shortest,
     }),
   },
   expandOpen: {
@@ -69,14 +71,9 @@ const WellnessCard = (props) => {
 
 console.log(props.cardInfo)
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} color="A400">
       <CardHeader
-       
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        class="title"
         title="WellnessCard"
         subheader={props.cardInfo.fields.date}
 
@@ -111,24 +108,24 @@ console.log(props.cardInfo)
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Highlight</Typography>
+          <h4>Highlight</h4>
           <Typography paragraph>
             <p>What was the highlight of your day?: {props.cardInfo.fields.highlight}</p>
             <p>What activities contributed to your highlight?:</p>{props.cardInfo.fields.activities}
           </Typography>
 
-          <Typography paragraph>Vent That Sh*T!</Typography>
+          <h4>Vent That Sh*T!</h4>
           <Typography paragraph>
             {props.cardInfo.fields.vent}
           </Typography>
           <Typography paragraph>
-            <p>What Worked</p>
+            <h4>What Worked</h4>
             <p>What are you proud of?{props.cardInfo.fields.whatWorked}</p>
             <p>What went well?{props.cardInfo.fields.wentWell}</p>
             <p>What made you feel good?{props.cardInfo.fields.feelGood}</p>
           </Typography>
           <Typography>
-            <p>What to Improve</p>
+            <h4>What To Improve</h4>
             <p>What would you change?{props.cardInfo.fields.improve}</p>
             <p>What contributed to any negative emotions?{props.cardInfo.fields.negativeEmotions}</p>
           </Typography>

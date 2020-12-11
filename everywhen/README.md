@@ -63,38 +63,31 @@ id: "recCkhPPUO0oa84GU"
 
 | Day    | Deliverable                                             | Status     |
 | ------ | ------------------------------------------------------- | ---------- |
-| Dec 4  | Project Approval / Airtable Setup                       | Incomplete |
-| Dec 7  | Start user interface component by making entries in Airtable and displaying them | Incomplete |
-| Dec 8  | Finish User Interface Function / CSS                    | Incomplete |
+| Dec 4  | Project Approval / Airtable Setup                       |Complete |
+| Dec 7  | Start user interface component by making entries in Airtable and displaying them |Complete |
+| Dec 8  | Finish User Interface Function / CSS                    | Complete |
 | Dec 9  | Advanced CSS                                            | Incomplete |
-| Dec 10 | Deployed MVP / Start PostMVP                            | Incomplete |
-| Dec 11 | Presentations                                           | Incomplete |
+| Dec 10 | Deployed MVP / Start PostMVP                            | Complete |
+| Dec 11 | Presentations                                           | Complete |
 
 ## Timeframes
 
 | Component                                    | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                                     |    H     |      2hrs      |      ---      |     ---     |
-| Airtable Setup                               |    H     |      2hrs      |      ---      |     ---     |
-| WellnessTime Mood Data Population            |    H     |      3hrs      |      ---      |     ---     |
-| WellnessTime Highlight Data Population       |    H     |      2hrs      |      ---      |     ---     |
-| WellnessTime Vent Data Population            |    H     |      2hrs      |      ---      |     ---     |
-| WellnessTime Coping Strategy Data Population |    H     |      2hrs      |      ---      |     ---     |
-| WellnessTime What Worked Data Population     |    H     |      2hrs      |      ---      |     ---     |
-| WellnessTime What to Improve Data Population |    H     |      2hrs      |      ---      |     ---     |
-| WellnessTime Add Form                        |    H     |      2hrs      |      ---      |     ---     |
-| WellnessTime CSS                             |    H     |      4hrs      |      ---      |     ---     |
-| WorkeTime Data Population                    |    H     |      3hrs      |      ---      |     ---     |
-| WorkTime Add Form                            |    H     |      2hrs      |      ---      |     ---     |
-| FamilyTime Data Population                   |    H     |      3hrs      |      ---      |     ---     |
-| FamilyTime Add Form                          |    H     |      2hrs      |      ---      |     ---     |
-| MeTime Data Population                       |    H     |      3hrs      |      ---      |     ---     |
-| MeTime Add Form                              |    H     |      2hrs      |      ---      |   
-| WorkTime CSS                                 |    H     |      1hrs      |      ---      |     ---     |
-| FamilyTime CSS                               |    H     |      1hrs      |      ---      |     ---     |
-| MeTime CSS                                   |    H     |      1hrs      |      ---      |     ---     |
-| Advanced CSS                                 |    H     |      2hrs      |      ---      |     ---     |
-| Total                                        |    H     |     43hrs      |      ---      |     ---     |
+| Proposal                                     |    H     |      2hrs      |      2hrs     |     ---     |
+| Airtable Setup                               |    H     |      4hrs      |      5hrs     |     ---     |
+| WellnessTime Mood Data Population            |    H     |      4hrs      |      4hrs     |     ---     |
+| WellnessTime Highlight Data Population       |    H     |      2hrs      |      3hrs     |     ---     |
+| WellnessTime Vent Data Population            |    H     |      2hrs      |      3hrs     |     ---     |
+| WellnessTime What Worked Data Population     |    H     |      2hrs      |      3hrs     |     ---     |
+| WellnessTime What to Improve Data Population |    H     |      2hrs      |      3hrs     |     ---     |
+| WellnessTime Add Form                        |    H     |      2hrs      |      1hr      |     ---     |
+| WellnessTime CSS                             |    H     |      4hrs      |      4hrs     |     ---     | 
+| WellnessCard                                 |    H     |      4hrs      |      4hrs     |     ---     |
+| Next/submit button for each component        |    H     |      2hrs      |      1hr      |     ---     |
+| delete button for each card                  |    H     |      2hrs      |      1hr      |     ---     |
+| Advanced CSS                                 |    H     |      2hrs      |      1hrs     |     ---     |
+| Total                                        |    H     |     40hrs      |      ---      |     ---     |
 
 ## SWOT Analysis
 
