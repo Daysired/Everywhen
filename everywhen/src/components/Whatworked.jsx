@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import "./Whatworked.css";
 
 const Whatworked = (props) => {
@@ -55,15 +55,16 @@ const Whatworked = (props) => {
             value={feelGood}
             onChange={(e) => setFeelGood(e.target.value)}
           />
-          {/* <button type="submit">Make Entry</button> */}
+        
           <Button
             id="button"
             type="submit"
             variant="contained"
             color="primary"
-            size="small">
+            size="small"
+          >
             Next
-            </Button>
+          </Button>
         </form>
       </div>
     </div>

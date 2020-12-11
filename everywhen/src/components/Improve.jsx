@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import "./Improve.css";
 
 const Improve = (props) => {
@@ -46,16 +46,17 @@ const Improve = (props) => {
             value={negativeEmotions}
             onChange={(e) => setNegativeEmotions(e.target.value)}
           />
-          
+
           <Button
             id="button"
             onClick={handleSubmit}
             type="submit"
             variant="contained"
             color="primary"
-            size="small">
+            size="small"
+          >
             Submit
-            </Button>
+          </Button>
         </form>
       </div>
     </div>

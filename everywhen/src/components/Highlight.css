@@ -1,12 +1,11 @@
 form {
   display: grid;
   font-size: 15px;
-  text-decoration: solid; 
+  text-decoration: solid;
   text-align: left;
   font-weight: bolder;
   color: white;
 }
-
 
 h3 {
   text-align: center;

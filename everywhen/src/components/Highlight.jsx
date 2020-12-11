@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import "./Highlight.css";
 
 const Highlight = (props) => {
@@ -33,7 +33,7 @@ const Highlight = (props) => {
         <form onSubmit={handleSubmit}>
           <h3>Highlight</h3>
           <label htmlFor="highlight">What was the highlight of your day?</label>
-         
+
           <input
             name="highlight"
             type="text"
@@ -43,22 +43,23 @@ const Highlight = (props) => {
           <label htmlFor="activities">
             What activities contributed to your highlight?
           </label>
-       
+
           <input
             name="activities"
             type="text"
             value={activities}
             onChange={(e) => setActivities(e.target.value)}
           />
-      
+
           <Button
             id="button"
             type="submit"
             variant="contained"
             color="primary"
-            size="small">
+            size="small"
+          >
             Next
-            </Button>
+          </Button>
         </form>
       </div>
     </div>

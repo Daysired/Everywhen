@@ -1,18 +1,18 @@
- form {
+form {
   display: grid;
   font-size: 15px;
-  text-decoration: solid; 
+  text-decoration: solid;
   text-align: left;
   font-weight: bolder;
   color: white;
-} 
+}
 
- #horizontal-list {
-   display: flex;
-   justify-content: space-around;
- }
+#horizontal-list {
+  display: flex;
+  justify-content: space-around;
+}
 
- h3 {
+h3 {
   text-align: center;
   color: black;
 }
@@ -28,7 +28,7 @@ label {
   margin-bottom: 10px;
   height: 30px;
   border: 2px solid #f50057;
-} 
+}
 #button {
   width: 60px;
   float: right;
