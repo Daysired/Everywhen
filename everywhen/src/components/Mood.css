@@ -7,8 +7,9 @@
   color: white;
 } 
 
- form li {
-   
+ #horizontal-list {
+   display: flex;
+   justify-content: space-around;
  }
 
  h3 {
@@ -20,10 +21,15 @@ label {
   color: black;
 }
 
-input {
+#date {
+  width: 200px;
+  float: right;
   margin-top: 5px;
   margin-bottom: 10px;
-  height: 20px;
+  height: 30px;
   border: 2px solid #f50057;
 } 
-
+#button {
+  width: 60px;
+  float: right;
+}

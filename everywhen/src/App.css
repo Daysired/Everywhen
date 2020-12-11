@@ -88,5 +88,10 @@ h1 {
       margin-left: 1%;
       font-size: 30px;
     }
-  
+  #card {
+    width: 200px;
+  }
+  #title{
+    font-size: 10px;
+  }
 }

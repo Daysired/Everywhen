@@ -74,17 +74,17 @@ id: "recCkhPPUO0oa84GU"
 
 | Component                                    | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                                     |    H     |      2hrs      |      2hrs     |     ---     |
+| Proposal                                     |    H     |      2hrs      |      3hrs     |     ---     |
 | Airtable Setup                               |    H     |      4hrs      |      5hrs     |     ---     |
 | WellnessTime Mood Data Population            |    H     |      4hrs      |      4hrs     |     ---     |
 | WellnessTime Highlight Data Population       |    H     |      2hrs      |      3hrs     |     ---     |
 | WellnessTime Vent Data Population            |    H     |      2hrs      |      3hrs     |     ---     |
 | WellnessTime What Worked Data Population     |    H     |      2hrs      |      3hrs     |     ---     |
 | WellnessTime What to Improve Data Population |    H     |      2hrs      |      3hrs     |     ---     |
-| WellnessTime Add Form                        |    H     |      2hrs      |      1hr      |     ---     |
-| WellnessTime CSS                             |    H     |      4hrs      |      4hrs     |     ---     | 
+| WellnessTime Add Form                        |    H     |      2hrs      |      3hr      |     ---     |
+| WellnessTime CSS                             |    H     |      4hrs      |      4hrs     |     ---     
 | WellnessCard                                 |    H     |      4hrs      |      4hrs     |     ---     |
-| Next/submit button for each component        |    H     |      2hrs      |      1hr      |     ---     |
+| Next/submit button for each component        |    H     |      2hrs      |      2hr      |     ---     |
 | delete button for each card                  |    H     |      2hrs      |      1hr      |     ---     |
 | Advanced CSS                                 |    H     |      2hrs      |      1hrs     |     ---     |
 | Total                                        |    H     |     40hrs      |      ---      |     ---     |

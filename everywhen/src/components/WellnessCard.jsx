@@ -46,11 +46,11 @@ const WellnessCard = (props) => {
   const [expanded, setExpanded] = useState(false);
   const [emoji, setEmoji] = useState("");
   const emojis = {
-    dissatisfied: "https://i.pinimg.com/originals/da/8c/21/da8c2163061be58d770f6f9af78258e8.png",
-    satisfied: "",
-    satisfiedv: "",
-    verysatisfied: "",
-    verydissatisfied: "",
+    Sad: "https://i.pinimg.com/originals/da/8c/21/da8c2163061be58d770f6f9af78258e8.png",
+    Happy: "https://image.shutterstock.com/image-vector/smiling-emoticon-happy-eyes-rosy-260nw-336997097.jpg",
+    FeelingGood: "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/smiling-face.png",
+    Depressed: "https://image.shutterstock.com/image-illustration/emoji-sad-unhappy-feeling-depressed-260nw-1087583894.jpg",
+    Excited: "https://image.shutterstock.com/image-illustration/isolated-yellow-smiling-face-upper-260nw-677579860.jpg",
     
   }
   useEffect(() => {
@@ -71,9 +71,9 @@ const WellnessCard = (props) => {
 
 console.log(props.cardInfo)
   return (
-    <Card className={classes.root} color="A400">
+    <Card className={classes.root} id="card">
       <CardHeader
-        class="title"
+        id="title"
         title="WellnessCard"
         subheader={props.cardInfo.fields.date}
 
@@ -110,8 +110,8 @@ console.log(props.cardInfo)
         <CardContent>
           <h4>Highlight</h4>
           <Typography paragraph>
-            <p>What was the highlight of your day?: {props.cardInfo.fields.highlight}</p>
-            <p>What activities contributed to your highlight?:</p>{props.cardInfo.fields.activities}
+            <p>What was the highlight of your day: {props.cardInfo.fields.highlight}</p>
+            <p>What activities contributed to your highlight:</p>{props.cardInfo.fields.activities}
           </Typography>
 
           <h4>Vent That Sh*T!</h4>
@@ -120,14 +120,14 @@ console.log(props.cardInfo)
           </Typography>
           <Typography paragraph>
             <h4>What Worked</h4>
-            <p>What are you proud of?{props.cardInfo.fields.whatWorked}</p>
-            <p>What went well?{props.cardInfo.fields.wentWell}</p>
-            <p>What made you feel good?{props.cardInfo.fields.feelGood}</p>
+            <p>What are you proud of:{props.cardInfo.fields.whatWorked}</p>
+            <p>What went well:{props.cardInfo.fields.wentWell}</p>
+            <p>What made you feel good:{props.cardInfo.fields.feelGood}</p>
           </Typography>
           <Typography>
             <h4>What To Improve</h4>
-            <p>What would you change?{props.cardInfo.fields.improve}</p>
-            <p>What contributed to any negative emotions?{props.cardInfo.fields.negativeEmotions}</p>
+            <p>What would you change:{props.cardInfo.fields.improve}</p>
+            <p>What contributed to any negative emotions:{props.cardInfo.fields.negativeEmotions}</p>
           </Typography>
         </CardContent>
       </Collapse>

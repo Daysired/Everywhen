@@ -56,9 +56,9 @@ export default function FloatingActionButtons(props) {
       <form onSubmit={handleSubmit}>
       
         <div>
-        {/* <div class="table"> */}
+        
           <ul id="horizontal-list">
-        <li><span onClick={() => setMood("sad")}>
+        <li><span onClick={() => setMood("Sad")}>
           <Fab size="large" color="secondary">
             <SentimentDissatisfiedIcon />
           </Fab>
@@ -88,17 +88,17 @@ export default function FloatingActionButtons(props) {
           </Fab>
             </span> </li>
             </ul> 
-            {/* </div> */}
+            
         </div>
         <label htmlFor="date">Date</label>
-        <input
+        <input id= "date"
           name="date"
           type="text"
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
 
-        <Button type="submit" variant="contained" color="primary" size="small">
+        <Button type="submit" variant="contained" color="primary" size="small" id="button">
        Next
       </Button>
         </form>
