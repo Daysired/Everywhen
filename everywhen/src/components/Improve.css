@@ -1,0 +1,25 @@
+form {
+  /* display: grid; */
+  font-size: 15px;
+  text-decoration: solid; 
+  text-align: left;
+  font-weight: bolder;
+  color: white;
+}
+
+
+h3 {
+  text-align: center;
+  color: black;
+}
+
+label {
+  color: black;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  height: 50px;
+  border: 2px solid #f50057;
+}

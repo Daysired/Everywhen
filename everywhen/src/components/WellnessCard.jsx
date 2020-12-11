@@ -13,20 +13,11 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { baseURL, config } from "../services";
-import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { createMuiTheme } from '@material-ui/core/styles';
-import pink from '@material-ui/core/colors/pink';
+import "./WellnessCard.css";
+
 
 const useStyles = makeStyles((theme) => ({
-  // palette: {
-  //   primary: {
-  //     main: pink[500],
-  //   },
-  //   secondary: {
-  //     main: '#f44336',
-  //   },
-  // },
   root: {
     maxWidth: 275,
   },
@@ -36,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
   },
   expand: {
     transform: 'rotate(0deg)',
-    // marginLeft: 'auto',
-    // transition: theme.transitions.create('transform', {
-    //   duration: theme.transitions.duration.shortest,
-    // }),
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
   },
   expandOpen: {
     transform: 'rotate(180deg)',
@@ -78,7 +69,7 @@ const WellnessCard = (props) => {
 
 console.log(props.cardInfo)
   return (
-    <Card className={classes.root} color="">
+    <Card className={classes.root}>
       <CardHeader
        
         action={

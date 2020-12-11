@@ -34,45 +34,24 @@ const Highlight = (props) => {
         <form onSubmit={handleSubmit}>
           <h3>Highlight</h3>
           <label htmlFor="highlight">What was the highlight of your day?</label>
-          <TextField
-          id="standard-multiline-flexible"
-          label="highlight"
-          multiline
-          rowsMax={4}
-          value={activities}
-          onChange={(e) => setHighlight(e.target.value)}
-        />
-          {/* <input
+         
+          <input
             name="highlight"
             type="text"
             value={highlight}
             onChange={(e) => setHighlight(e.target.value)}
-          /> */}
+          />
           <label htmlFor="activities">
             What activities contributed to your highlight?
           </label>
-          {/* <TextField
-          id="outlined-textarea"
-          label="Multiline Placeholder"
-          placeholder="Placeholder"
-          multiline
-          variant="outlined"
-        /> */}
-          <TextField
-          id="standard-multiline-flexible"
-          label="activities"
-          multiline
-          rowsMax={4}
-          value={activities}
-          onChange={(e) => setActivities(e.target.value)}
-        />
-          {/* <input
+       
+          <input
             name="activities"
             type="text"
             value={activities}
             onChange={(e) => setActivities(e.target.value)}
-          /> */}
-          {/* <button type="submit">Make Entry</button> */}
+          />
+      
           <Button
             type="submit"
             variant="contained"

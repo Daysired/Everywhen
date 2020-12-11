@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import "./Vent.css";
 
 const Vent = (props) => {
   const [vent, setVent] = useState("");
@@ -37,7 +38,6 @@ const Vent = (props) => {
             value={vent}
             onChange={(e) => setVent(e.target.value)}
           />
-          {/* <button type="submit">Make Entry</button> */}
           <Button
             type="submit"
             variant="contained"

@@ -44,7 +44,7 @@ function WellnessTime(props) {
         handleWellTime={props.handleWellTime} selectedTab={selectedTab}/>}
       {selectedTab === 4 && <Improve setToggleFetch={props.setToggleFetch} handleClick={handleChange}
             handleWellTime={props.handleWellTime} selectedTab={selectedTab} submitWellTime={props.submitWellTime} />}
-          <Typography component="div" style={{ backgroundColor: 'white', height: '100vh' }} />
+          <Typography component="div" style={{ height: '100vh' }} />
         </Container>
     </React.Fragment>
     </div>

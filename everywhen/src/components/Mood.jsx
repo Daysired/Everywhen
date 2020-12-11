@@ -9,10 +9,10 @@ import SentimentDissatisfiedIcon from "@material-ui/icons/SentimentDissatisfied"
 import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt";
 import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
 import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
-import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
+import "./Mood.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,59 +52,57 @@ export default function FloatingActionButtons(props) {
 
   return (
     <div className={classes.root}>
-      <React.Fragment>
-      <CssBaseline />
-      <Container maxwidth="md">
+      
       <form onSubmit={handleSubmit}>
-        <TextField
-          id="standard-secondary"
-          label="Date"
-          color="secondary"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}/>
-        {/* <input
-          name="vent"
-          type="text"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        /> */}
-
-        <span onClick={() => setMood("dissatisfied")}>
+      
+        <div>
+        {/* <div class="table"> */}
+          <ul id="horizontal-list">
+        <li><span onClick={() => setMood("sad")}>
           <Fab size="large" color="secondary">
             <SentimentDissatisfiedIcon />
           </Fab>
-        </span>
-        <span onClick={() => setMood("satisfiedv")}>
+            </span></li>
+              
+            <li><span onClick={() => setMood("Happy")}>
           <Fab color="secondary">
             <SentimentSatisfiedAltIcon />
           </Fab>
-        </span>
+        </span></li>
 
-        <span onClick={() => setMood("satisfied")}>
+        <li><span onClick={() => setMood("Feeling Good")}>
           <Fab color="secondary">
             <SentimentSatisfiedIcon />
           </Fab>
-        </span>
+        </span></li>
 
-        <span onClick={() => setMood("verydissatisfied")}>
+        <li><span onClick={() => setMood("Depressed")}>
           <Fab color="secondary">
             <SentimentVeryDissatisfiedIcon />
           </Fab>
-        </span>
+        </span></li>
 
-        <span onClick={() => setMood("verysatisfied")}>
+        <li><span onClick={() => setMood("Excited")}>
           <Fab color="secondary">
             <SentimentVerySatisfiedIcon />
           </Fab>
-        </span>
-        {/* <button type="submit">Make Entry</button> */}
+            </span> </li>
+            </ul> 
+            {/* </div> */}
+        </div>
+        <label htmlFor="date">Date</label>
+        <input
+          name="date"
+          type="text"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+
         <Button type="submit" variant="contained" color="primary" size="small">
        Next
       </Button>
         </form>
-        <Typography component="div" style={{ backgroundColor: 'white', height: '100vh' }} />
-        </Container>
-    </React.Fragment>
+        
     </div>
   );
 }

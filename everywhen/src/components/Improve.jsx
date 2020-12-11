@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import "./Improve.css";
 
 const Improve = (props) => {
   const [improve, setImprove] = useState("");
@@ -21,7 +22,7 @@ const Improve = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     props.submitWellTime(improve, negativeEmotions);
   };
 
