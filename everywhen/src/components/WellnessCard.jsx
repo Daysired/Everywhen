@@ -19,16 +19,16 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import pink from '@material-ui/core/colors/pink';
 
 const useStyles = makeStyles((theme) => ({
-  palette: {
-    primary: {
-      main: pink[500],
-    },
-    secondary: {
-      main: '#f44336',
-    },
-  },
+  // palette: {
+  //   primary: {
+  //     main: pink[500],
+  //   },
+  //   secondary: {
+  //     main: '#f44336',
+  //   },
+  // },
   root: {
-    maxWidth: 345,
+    maxWidth: 275,
   },
   media: {
     height: 0,
@@ -36,10 +36,10 @@ const useStyles = makeStyles((theme) => ({
   },
   expand: {
     transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
+    // marginLeft: 'auto',
+    // transition: theme.transitions.create('transform', {
+    //   duration: theme.transitions.duration.shortest,
+    // }),
   },
   expandOpen: {
     transform: 'rotate(180deg)',
@@ -78,7 +78,7 @@ const WellnessCard = (props) => {
 
 console.log(props.cardInfo)
   return (
-    <Card className={classes.root} color="secondary">
+    <Card className={classes.root} color="">
       <CardHeader
        
         action={
@@ -126,9 +126,8 @@ console.log(props.cardInfo)
             <p>What activities contributed to your highlight?:</p>{props.cardInfo.fields.activities}
           </Typography>
 
-          <Typography paragraph>Vent</Typography>
+          <Typography paragraph>Vent That Sh*T!</Typography>
           <Typography paragraph>
-            <p>Vent That Sh*T!</p>
             {props.cardInfo.fields.vent}
           </Typography>
           <Typography paragraph>

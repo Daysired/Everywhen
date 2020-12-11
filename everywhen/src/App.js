@@ -67,7 +67,7 @@ function App(props) {
       <Route exact path="/">
         <h1>hiiii</h1>
       </Route>
-      <Route path='/well-time'>
+      <Route path="/well-time">
         <WellnessTime
           setToggleFetch={setToggleFetch}
           handleClick={handleClick}

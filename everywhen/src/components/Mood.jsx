@@ -10,6 +10,9 @@ import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt"
 import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
 import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 import TextField from '@material-ui/core/TextField';
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,6 +52,9 @@ export default function FloatingActionButtons(props) {
 
   return (
     <div className={classes.root}>
+      <React.Fragment>
+      <CssBaseline />
+      <Container maxwidth="md">
       <form onSubmit={handleSubmit}>
         <TextField
           id="standard-secondary"
@@ -95,7 +101,10 @@ export default function FloatingActionButtons(props) {
         <Button type="submit" variant="contained" color="primary" size="small">
        Next
       </Button>
-      </form>
+        </form>
+        <Typography component="div" style={{ backgroundColor: 'white', height: '100vh' }} />
+        </Container>
+    </React.Fragment>
     </div>
   );
 }

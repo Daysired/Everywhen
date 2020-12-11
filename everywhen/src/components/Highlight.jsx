@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import "./Highlight.css";
 
 const Highlight = (props) => {
   const [highlight, setHighlight] = useState("");

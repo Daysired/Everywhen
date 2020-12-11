@@ -6,6 +6,9 @@ import Highlight from "./Highlight";
 import Vent from "./Vent";
 import Whatworked from "./Whatworked";
 import Improve from "./Improve";
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
 import "./WellnessTime.css";
 
 
@@ -18,8 +21,11 @@ function WellnessTime(props) {
   };
 
   return (
-    <>
-      <AppBar position="static" color="primary" className="appbar">
+    <div class="container">
+      <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="md">
+      <AppBar position="static" color="primary" maxWidth="md" className="appbar">
         <Tabs value={selectedTab} onChange={handleChange}>
           <Tab label="Mood" />
           <Tab label="Highlight" />
@@ -37,8 +43,11 @@ function WellnessTime(props) {
       {selectedTab === 3 && <Whatworked setToggleFetch={props.setToggleFetch} handleClick={handleChange}
         handleWellTime={props.handleWellTime} selectedTab={selectedTab}/>}
       {selectedTab === 4 && <Improve setToggleFetch={props.setToggleFetch} handleClick={handleChange}
-        handleWellTime={props.handleWellTime} selectedTab={selectedTab}submitWellTime={props.submitWellTime}/>}
-    </>
+            handleWellTime={props.handleWellTime} selectedTab={selectedTab} submitWellTime={props.submitWellTime} />}
+          <Typography component="div" style={{ backgroundColor: 'white', height: '100vh' }} />
+        </Container>
+    </React.Fragment>
+    </div>
   );
 }
 
