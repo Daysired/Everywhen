@@ -6,7 +6,7 @@ Everywhen
 
 ## Project Description
 
-Everywhen is an Airtable and React build that serves as a self tracker for mental wellness and a daily planner. It allows users to keep track of their daily responsiblities and of their mental health. The app is composed of four fields; WorkTime, FamilyTime, MeTime and WellnessTime. Users will be able to click each WorkTime, FamilyTime, and MeTime fields and see and add "Activities", "Time", and "Priority" for each task they have to do on a daily basis. Moreover, when users click WellnessTime they will be able to asses their mental health by adding their Mood, Daily Highlight, Daily Vent, Coping Strategy, What Worked, What to Improve. Users will be able to add data to each field by clicking an "Add" button at the bottom of each field. Users will also be able to see their daily WellnessTime information displayed in card form and they will have the option to delete it as well.
+Everywhen is an Airtable and React build that serves as a self tracker for mental wellness. The app is composed of four components; Mood, Highlight, Vent, What Worked , and Improve. When users navigate to the WellnessTime page they will be able to asses their mental health by adding their Mood, Daily Highlight, Daily Vent, What Worked, What to Improve. Users will be able to add data to each component and click the "Next" button at the bottom of each component to move on to the next component. Moreover, users will also be able to see their daily WellnessTime information displayed in card form and they will have the option to delete it as well.
 
 ## Wireframes
 
@@ -44,20 +44,15 @@ id: "recCkhPPUO0oa84GU"
 
 #### MVP
 
-- Create a WellnessTime page that holds the Mood, Daily Highlight, Daily Vent, Coping Strategy, What Worked, What to Improve fields
+- Create a WellnessTime page that holds the Mood, Daily Highlight, Daily Vent, What Worked, What to Improve components
 - Make buttons for describing mood
-- When Clicked each button should pop up an emoji above the button that corresponds to the mood selected by the user
-- Make each field clickable and expand to display the information
-- Use forms to add to each field
-- Create an "Add" button that when clicked brings out the form to add data to each field
+- Use forms to add to each information to each component
 - Save and display User WellnessTime information in card form 
 - Create delete button for WellnessTime cards
 
 #### PostMVP
-
-- Create a page that holds the WorkTime, FamilyTime, and MeTime fields
+- Add WorkTime, FamilyTime, MeTime components for users to keep track of daily responsiblities and activities along with their mental health 
 - Work on advanced CSS
-- Add daily goals component
 
 ## Project Schedule
 
@@ -66,7 +61,7 @@ id: "recCkhPPUO0oa84GU"
 | Dec 4  | Project Approval / Airtable Setup                       |Complete |
 | Dec 7  | Start user interface component by making entries in Airtable and displaying them |Complete |
 | Dec 8  | Finish User Interface Function / CSS                    | Complete |
-| Dec 9  | Advanced CSS                                            | Incomplete |
+| Dec 9  | Advanced CSS                                            | Complete |
 | Dec 10 | Deployed MVP / Start PostMVP                            | Complete |
 | Dec 11 | Presentations                                           | Complete |
 
@@ -74,20 +69,20 @@ id: "recCkhPPUO0oa84GU"
 
 | Component                                    | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                                     |    H     |      2hrs      |      3hrs     |     ---     |
-| Airtable Setup                               |    H     |      4hrs      |      5hrs     |     ---     |
-| WellnessTime Mood Data Population            |    H     |      4hrs      |      4hrs     |     ---     |
-| WellnessTime Highlight Data Population       |    H     |      2hrs      |      3hrs     |     ---     |
-| WellnessTime Vent Data Population            |    H     |      2hrs      |      3hrs     |     ---     |
-| WellnessTime What Worked Data Population     |    H     |      2hrs      |      3hrs     |     ---     |
-| WellnessTime What to Improve Data Population |    H     |      2hrs      |      3hrs     |     ---     |
-| WellnessTime Add Form                        |    H     |      2hrs      |      3hr      |     ---     |
-| WellnessTime CSS                             |    H     |      4hrs      |      4hrs     |     ---     
-| WellnessCard                                 |    H     |      4hrs      |      4hrs     |     ---     |
-| Next/submit button for each component        |    H     |      2hrs      |      2hr      |     ---     |
-| delete button for each card                  |    H     |      2hrs      |      1hr      |     ---     |
-| Advanced CSS                                 |    H     |      2hrs      |      1hrs     |     ---     |
-| Total                                        |    H     |     40hrs      |      ---      |     ---     |
+| Proposal                                     |    H     |      2hrs      |      3hrs     |     3hrs    |
+| Airtable Setup                               |    H     |      4hrs      |      5hrs     |     5hrs    |
+| WellnessTime Mood Data Population            |    H     |      4hrs      |      4hrs     |     4hrs    |
+| WellnessTime Highlight Data Population       |    H     |      2hrs      |      3hrs     |     3hrs    |
+| WellnessTime Vent Data Population            |    H     |      2hrs      |      3hrs     |     3hrs    |
+| WellnessTime What Worked Data Population     |    H     |      2hrs      |      3hrs     |     3hrs    |
+| WellnessTime What to Improve Data Population |    H     |      2hrs      |      3hrs     |     3hrs    |
+| WellnessTime Add Form                        |    H     |      2hrs      |      3hrs     |     3hrs    |
+| WellnessTime CSS                             |    M     |      4hrs      |      4hrs     |     4hrs    |
+| WellnessCard                                 |    H     |      4hrs      |      4hrs     |     4hrs    |
+| Next/submit button for each component        |    H     |      2hrs      |      3hrs     |     3hrs    |
+| delete button for each card                  |    H     |      2hrs      |      1hr      |     1hr     |
+| Advanced CSS                                 |    L     |      2hrs      |      1hrs     |     1hrs    |
+| Total                                        |          |     40hrs      |      40hrs    |    40hrs    |
 
 ## SWOT Analysis
 

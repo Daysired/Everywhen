@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import "./Improve.css";
 
 const Improve = (props) => {
@@ -47,9 +46,7 @@ const Improve = (props) => {
             value={negativeEmotions}
             onChange={(e) => setNegativeEmotions(e.target.value)}
           />
-          {/* <button onClick={handleSubmit} type="submit">
-            Submit
-          </button> */}
+          
           <Button
             id="button"
             onClick={handleSubmit}
@@ -59,10 +56,6 @@ const Improve = (props) => {
             size="small">
             Submit
             </Button>
-
-          {/* <button onClick={props.submitWellTime}>
-           Submit 
-          </button> */}
         </form>
       </div>
     </div>
