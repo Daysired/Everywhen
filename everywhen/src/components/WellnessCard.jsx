@@ -108,11 +108,11 @@ const WellnessCard = (props) => {
         <CardContent style={{color:"#FAE0DD"}}>
           <h4 className="card-h4">Highlight</h4>
           <Typography paragraph>
-            <p>
+            <p className="card-text">
               What was the highlight of your day:{" "}
               {props.cardInfo.fields.highlight}
             </p>
-            <p>What activities contributed to your highlight:</p>
+            <p className="card-text">What activities contributed to your highlight:</p>
             {props.cardInfo.fields.activities}
           </Typography>
 
@@ -120,14 +120,14 @@ const WellnessCard = (props) => {
           <Typography paragraph>{props.cardInfo.fields.vent}</Typography>
           <Typography paragraph>
             <h4 className="card-h4">What Worked</h4>
-            <p>What are you proud of:{props.cardInfo.fields.whatWorked}</p>
-            <p>What went well:{props.cardInfo.fields.wentWell}</p>
-            <p>What made you feel good:{props.cardInfo.fields.feelGood}</p>
+            <p className="card-text">What are you proud of:{props.cardInfo.fields.whatWorked}</p>
+            <p className="card-text">What went well:{props.cardInfo.fields.wentWell}</p>
+            <p className="card-text">What made you feel good:{props.cardInfo.fields.feelGood}</p>
           </Typography>
           <Typography>
             <h4 className="card-h4">What To Improve</h4>
-            <p>What would you change:{props.cardInfo.fields.improve}</p>
-            <p>
+            <p className="card-text">What would you change:{props.cardInfo.fields.improve}</p>
+            <p className="card-text">
               What contributed to any negative emotions:
               {props.cardInfo.fields.negativeEmotions}
             </p>
