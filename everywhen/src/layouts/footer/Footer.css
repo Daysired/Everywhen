@@ -1,0 +1,154 @@
+.footer {
+  width: 100vw;
+  height:35vh;
+  /* margin-top: 10vh; */
+  background: #638C80;
+}
+
+.footer-container {
+  /* max-width: 1140px; */
+  height:0px;
+  /* margin: auto; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0px;
+}
+
+.footer .left {
+  /* height: 100%; */
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  margin-top: 6.5vh;
+  row-gap: 2vh;
+}
+
+.footer .right {
+  /* height: 100%; */
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* padding:0; */
+  margin-top: 6vh;
+  padding-left: 1rem;
+}
+
+.footer h4 {
+  font-size: .7rem;
+  margin-bottom: 1vh;
+  margin-top: 0;
+  color: #ffff;
+}
+
+.footer p {
+  font-size: .6rem;
+  margin-top: 1vh;
+  color: #ffff;
+}
+
+.footer .location {
+  display: flex;
+  align-items: center;
+}
+
+.footer .location p {
+  padding-bottom: 0;
+}
+
+.footer .location {
+  padding-top: 0;
+
+}
+
+
+
+/*=============== Media Queries ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .footer {
+    height:22vh;
+  }
+  
+}
+
+
+/* For medium devices */
+@media screen and (min-width: 540px) {
+  .footer p {
+    font-size: .7rem;
+  }
+
+  .footer .right {
+    margin-top:7vh;
+  }
+
+  .footer .left {
+    margin-top:7vh;
+    padding-left: 2.5rem;
+  }
+
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer h4 {
+    font-size: .8rem;
+  }
+
+  .footer p {
+    font-size: .75rem;
+  }
+
+  .footer .right {
+    margin-top:8vh;
+  }
+
+  .footer .left {
+    margin-top:8vh;
+    padding-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .footer h4 {
+    font-size: .8rem;
+  }
+
+  .footer p {
+    font-size: .75rem;
+  }
+
+  .footer .right {
+    margin-top:8vh;
+  }
+
+  .footer .left {
+    margin-top:8vh;
+    padding-left: 3.5rem;
+  }
+
+
+}
+
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .footer .left {
+    padding-left: 4.5rem;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1280px) {
+  .footer .left {
+    padding-left: 5.5rem;
+  }
+
+
+}
+
+
+

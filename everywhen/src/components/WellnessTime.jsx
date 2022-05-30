@@ -10,6 +10,7 @@ import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import "./WellnessTime.css";
+// import Layout from "../layouts/layout";
 
 function WellnessTime(props) {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -20,7 +21,8 @@ function WellnessTime(props) {
   };
 
   return (
-    <div class="container">
+    // <Layout>
+    <div className="assessment-div">
       <React.Fragment>
         <CssBaseline />
         <Container maxWidth="md">
@@ -82,7 +84,8 @@ function WellnessTime(props) {
           <Typography component="div" style={{ height: "100vh" }} />
         </Container>
       </React.Fragment>
-    </div>
+      </div>
+      // </Layout>
   );
 }
 

@@ -21,13 +21,17 @@ label {
   color: black;
 }
 
+.mood-list {
+  list-style: none;
+}
+
 #date {
   width: 200px;
   float: right;
   margin-top: 5px;
   margin-bottom: 10px;
   height: 30px;
-  border: 2px solid #f50057;
+  border: 2px solid #638C80;
 }
 #button {
   width: 60px;

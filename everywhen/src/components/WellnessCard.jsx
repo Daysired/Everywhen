@@ -14,6 +14,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { baseURL, config } from "../services";
 import DeleteIcon from "@material-ui/icons/Delete";
 import "./WellnessCard.css";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((pink) => ({
   root: {
@@ -70,10 +71,14 @@ const WellnessCard = (props) => {
 
   console.log(props.cardInfo);
   return (
-    <Card className={classes.root} id="card">
+    <div className="Wellness-Card">
+    {/* <Grid container spacing={2}>
+      <Grid item xs={4}> */}
+        <Card style={{ backgroundColor: "#638C80"}} className={classes.root} id="card">
       <CardHeader
         id="title"
         title="WellnessCard"
+        color="#FAE0DD"
         subheader={props.cardInfo.fields.date}
       />
       <CardMedia className={classes.media} image={emoji} title="emoji" />
@@ -83,7 +88,7 @@ const WellnessCard = (props) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton color="secondary" size="large" onClick={handleDelete}>
+        <IconButton style={{color:"#FAE0DD"}} size="large" onClick={handleDelete}>
           <DeleteIcon />
         </IconButton>
 
@@ -128,7 +133,10 @@ const WellnessCard = (props) => {
           </Typography>
         </CardContent>
       </Collapse>
-    </Card>
+        </Card>
+        {/* </Grid>
+      </Grid> */}
+      </div>
   );
 };
 

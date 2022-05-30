@@ -1,8 +1,31 @@
 
-.appbar {
-  margin-top: 4%;
-}
+/* .appbar {
+  margin-top: 30%;
+} */
+
+/* .MuiContainer-root.MuiContainer-maxWidthMd{
+  margin-top: 30%;
+} */
+/* .appbar-container {
+  margin-top: 70px;
+} */
 
 h5 {
   color:white;
+}
+/* 
+body {
+  background-color: pink;
+} */
+/* 
+@media (max-width: 768px) {
+
+} */
+
+.assessment-div {
+  height: 100vh;
+}
+
+.MuiContainer-root {
+  padding-top:5rem;
 }

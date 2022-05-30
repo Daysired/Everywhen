@@ -1,0 +1,412 @@
+body {
+  /* background-color: #F8F6EB; */
+  background-color: #FAE0DD;
+}
+
+/* Who We Are Section */
+.about__container {
+  row-gap: 2.5rem;
+  text-align: center;
+}
+
+.about__img {
+  width: 270px;
+  /* border-radius: 1.5rem; */
+  padding-left: 3.5rem;
+  display: flex;
+  margin-bottom: 7vh;
+}
+
+.about__data {
+  text-align: center;
+  width: 320px;
+  padding-left: 2rem;
+  margin-top: 4.5rem;
+  color: #638C80;
+  font-family: "COM4t Fine Regular", sans-serif;
+}
+
+.about__description {
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+
+
+/* How It Works section */
+
+.how-section {
+  height: 75vh;
+  width: 100vw;
+  background-color: #638C80;
+  font-family: "COM4t Fine Regular", sans-serif;
+}
+
+.how-it-works-title {
+  font-size: 1.5rem;
+  color: #FAE0DD;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.step__img {
+  width: 12%;
+  height: 12%;
+}
+
+.step-divs {
+  display: flex;
+  column-gap: 1.5rem;
+  row-gap: 3rem;
+  padding-left: 3rem;
+  color: #FAE0DD;
+  text-align: left;
+}
+
+.step-text {
+  margin-top: -.6rem;
+  margin-bottom: 1rem;
+}
+
+.h2-steps {
+  font-size: 1.2rem;
+}
+
+.step-description {
+  font-size: 1rem;
+  width: 13rem;
+}
+
+/* Get Started Section */
+
+.girlplant__img {
+  width: 250px;
+  margin-left: -2rem;
+  margin-top: 5rem;
+  border-radius: 1.5rem;
+  visibility: hidden;
+}
+
+.guyplant__img {
+  width: 250px;
+  border-radius: 1.5rem;
+  margin-left: 9rem;
+  margin-top: -6.7rem;
+}
+
+.get-started__container {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: 60px 60px 60px; */
+  padding-bottom: 4rem;
+}
+
+.get-started__data {
+  text-align: center;
+  margin-top: -15rem;
+  margin-left: -5rem;
+  color: #638C80;
+  font-family: "COM4t Fine Regular", sans-serif;
+  padding-left: 8rem;
+ 
+}
+
+.start__title {
+  display: flex;
+}
+
+.start__description {
+  margin-bottom: 0;
+  margin-top: 1rem;
+  text-decoration: underline;
+  display: flex;
+  padding-left: 1.5rem;
+}
+
+/*=============== Media Queries ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+
+  .about__title {
+    font-size: 1.4rem;
+  }
+
+  .about__description {
+   font-size: .9rem;
+  }
+
+  .about__data {
+    padding-left: 1.5rem;
+    width: 270px;
+  }
+
+  .start__title {
+    font-size: 1.4rem;
+  }
+
+  .start__description {
+   font-size: .9rem;
+  }
+
+  .get-started__data {
+    margin-top: -10rem;
+    margin-left: -6rem;
+  }
+
+  .guyplant__img {
+    margin-left: 5rem;
+    
+  }
+
+}
+
+
+/* For medium devices */
+@media screen and (min-width: 540px) {
+
+  .about__data {
+    padding-left: 3.5rem;
+    width: 420px;
+  }
+
+  .about__img {
+    width: 360px;
+    padding-left: 5.5rem;
+  }
+
+  .guyplant__img {
+    width: 300px;
+    margin-left: 15.5rem;
+  }
+
+  .get-started__data {
+    margin-left: 4rem;
+    margin-top: -18.2rem;
+  }
+
+  .girlplant__img {
+    width: 290px;
+    margin-left: -20rem;
+    visibility: visible;
+  }
+
+}
+
+
+@media screen and (min-width: 768px) {
+ 
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .about__description {
+   font-size: 1.3rem;
+  }
+
+  .about__data {
+    padding-left: 6.5rem;
+    width: 550px;
+  }
+
+  .about__img {
+    width: 460px;
+    padding-left: 9.5rem;
+  }
+
+  .start__title {
+    font-size: 2rem;
+  }
+
+  .start__description{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  .guyplant__img {
+    width: 380px;
+    margin-left: 24rem;
+    margin-top: -11.3rem;
+  }
+
+  .get-started__data {
+    margin-left: 9rem;
+    margin-top: -20.5rem;
+  }
+
+  .girlplant__img {
+    width: 372px;
+    margin-left: -28.5rem;
+  }
+
+
+}
+
+
+@media screen and (min-width: 820px) {
+
+  /* .about__title {
+    font-size: 2rem;
+  }
+
+  .about__description {
+   font-size: 1.3rem;
+  } */
+
+  .about__data {
+    /* padding-left: 6.5rem; */
+    width: 600px;
+  }
+
+  .about__img {
+    width: 500px;
+    padding-left: 9.5rem;
+   
+  }
+
+
+
+  /* .start__title {
+    font-size: 2rem;
+  }
+
+  .start__description{
+    font-size: 1.3rem;
+  } */
+
+  .guyplant__img {
+    width: 400px;
+    margin-left: 25rem;
+    margin-top: -12rem;
+  }
+
+  .get-started__data {
+    margin-left: 10rem;
+    margin-top: -20.5rem;
+  }
+
+  .start__description {
+    margin-left: 0.8rem;
+  }
+
+  .girlplant__img {
+    width: 390px;
+    margin-left: -31rem;
+  }
+
+
+}
+
+/* For large devices */
+
+@media screen and (min-width: 912px) {
+  .about__data {
+    padding-left: 8.5rem;
+    width: 630px;
+  }
+
+  .about__img {
+    padding-left: 12.5rem;
+   
+  }
+
+.guyplant__img {
+  width: 420px;
+  margin-left: 28rem;
+}
+
+.get-started__data {
+  margin-top: -22.5rem;
+  margin-left: 13rem;
+}
+
+.girlplant__img {
+  width:400px;
+}
+
+}
+
+@media screen and (min-width: 1024px) {
+  .about__title {
+    font-size: 1.7rem;
+  }
+
+  .about__img {
+    padding-left: 15.5rem;
+   
+  }
+
+  .about__data {
+    padding-left: 9.8rem;
+    width: 690px;
+  }
+
+  .guyplant__img {
+    margin-left: 34rem;
+  }
+
+  .girlplant__img {
+    margin-left: -34rem;
+  }
+
+   .start__title {
+    font-size: 1.7rem;
+  }
+
+  .start__description {
+    margin-left: -0.3rem;
+  }
+
+  .get-started__data {
+    margin-left: 17.5rem;
+    margin-top: -21.5rem;
+  }
+
+}
+
+
+@media screen and (min-width: 1280px) {
+
+  .about__data {
+    padding-left: 15.5rem;
+    width: 780px;
+  }
+
+  .about__img {
+    width: 500px;
+    padding-left: 24rem;
+  }
+
+  .guyplant__img {
+    margin-left: 42rem;
+  }
+
+  .girlplant__img {
+    margin-left: -27rem;
+  }
+
+  .get-started__data {
+    margin-left: 25rem;
+  }
+  
+}
+
+/* @media screen and (min-width: 1300px) and (max-width:1678px) {
+
+  .about__data {
+    padding-left: 27rem;
+    width: 780px;
+  }
+
+  .guyplant__img {
+    margin-left: 57rem;
+  }
+
+  .girlplant__img {
+    margin-left: 14rem;
+  }
+
+  .get-started__data {
+    margin-left: -3.5rem;
+  }
+  
+} */

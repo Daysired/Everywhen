@@ -1,9 +1,30 @@
-body {
-  background-color: rgb(185, 211, 245);
+/* body {
+  background-color: #F4F0D9;
+} */
+
+/* .MuiPaper-root {
+  padding-top: 5rem;
+} */
+
+.MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded {
+  margin-top: 5rem;
+  /* flex-direction: row; */
+  margin-left: 1.5vw;
+  position: sticky;
+
+
 }
 
-@media screen and (max-width: 500px) {
-  .title {
-    font-size: 10px;
-  }
+.Wellness-Card {
+  height: 100vh;
+ /* display: flex; */
+ /* row-gap: 30px; */
+  
 }
+
+
+/* @media screen and (min-width: 820px) {
+  .App {
+    display: flex;
+  }
+}  */

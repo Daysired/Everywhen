@@ -52,7 +52,7 @@ export default function FloatingActionButtons(props) {
       <form onSubmit={handleSubmit}>
         <div>
           <ul id="horizontal-list">
-            <li>
+            <li className="mood-list">
               <span onClick={() => setMood("Sad")}>
                 <Fab size="large" color="secondary">
                   <SentimentDissatisfiedIcon />
@@ -60,7 +60,7 @@ export default function FloatingActionButtons(props) {
               </span>
             </li>
 
-            <li>
+            <li className="mood-list">
               <span onClick={() => setMood("Happy")}>
                 <Fab color="secondary">
                   <SentimentSatisfiedAltIcon />
@@ -68,7 +68,7 @@ export default function FloatingActionButtons(props) {
               </span>
             </li>
 
-            <li>
+            <li className="mood-list">
               <span onClick={() => setMood("Feeling Good")}>
                 <Fab color="secondary">
                   <SentimentSatisfiedIcon />
@@ -76,7 +76,7 @@ export default function FloatingActionButtons(props) {
               </span>
             </li>
 
-            <li>
+            <li className="mood-list">
               <span onClick={() => setMood("Depressed")}>
                 <Fab color="secondary">
                   <SentimentVeryDissatisfiedIcon />
@@ -84,7 +84,7 @@ export default function FloatingActionButtons(props) {
               </span>
             </li>
 
-            <li>
+            <li className="mood-list">
               <span onClick={() => setMood("Excited")}>
                 <Fab color="secondary">
                   <SentimentVerySatisfiedIcon />

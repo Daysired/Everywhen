@@ -1,11 +1,24 @@
 import axios from "axios";
-import Nav from "./components/Nav";
 import WellnessTime from "./components/WellnessTime";
 import WellnessCard from "./components/WellnessCard"
+import Landing from "./components/Landing";
 import { Route, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { baseURL, config } from "./services"
 import './App.css';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import Layout from "./layouts/layout";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#638C80'
+    },
+    secondary: {
+      main: '#fefefe'
+    }
+  }
+})
 
 function App(props) {
 
@@ -62,9 +75,13 @@ function App(props) {
   
   
   return (
+    <ThemeProvider theme={theme}>
+ <Layout>
     <div className="App">
-      <Nav />
-      <Route exact path="/">
+      <Route exact path="/home">
+        <Landing />
+      </Route>
+      <Route exact path="/assessment">
         <WellnessTime
           setToggleFetch={setToggleFetch}
           handleClick={handleClick}
@@ -74,14 +91,16 @@ function App(props) {
           />
       </Route>
 
-      <Route path="/well-card">
+      <Route path="/card">
         {info.map((card) => (
           <WellnessCard cardInfo={card}  key={card.id} setToggleFetch={setToggleFetch}/>  
         ))}
         
       </Route>
 
-    </div>
+        </div>
+        </Layout>
+      </ThemeProvider>
   );
 }
 
