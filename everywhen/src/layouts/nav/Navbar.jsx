@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <Nav>
       <div className="logo">
-        <Link to="/home"><h1 class="main-logo">Everywhen</h1></Link>
+        <Link to="/"><h1 class="main-logo">Everywhen</h1></Link>
         </div>
       <Burger />
     </Nav>

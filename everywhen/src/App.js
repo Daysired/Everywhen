@@ -78,7 +78,7 @@ function App(props) {
     <ThemeProvider theme={theme}>
  <Layout>
     <div className="App">
-      <Route exact path="/home">
+      <Route exact path="/">
         <Landing />
       </Route>
       <Route exact path="/assessment">
