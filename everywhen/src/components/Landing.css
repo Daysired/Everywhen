@@ -17,6 +17,14 @@ body {
   margin-bottom: 7vh;
 }
 
+a {
+  color: #638C80;
+}
+
+a:hover {
+  color: black;
+}
+
 .about__data {
   text-align: center;
   width: 320px;

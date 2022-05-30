@@ -79,11 +79,12 @@ const WellnessCard = (props) => {
         id="title"
         title="WellnessCard"
         color="#FAE0DD"
+        style={{color:"#FAE0DD"}}
         subheader={props.cardInfo.fields.date}
       />
       <CardMedia className={classes.media} image={emoji} title="emoji" />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" style={{color:"#FAE0DD"}} component="p">
           {props.cardInfo.fields.mood}
         </Typography>
       </CardContent>
@@ -100,11 +101,11 @@ const WellnessCard = (props) => {
           aria-expanded={expanded}
           aria-label="show more"
         >
-          <ExpandMoreIcon />
+          <ExpandMoreIcon style={{color:"#FAE0DD"}} />
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
+        <CardContent style={{color:"#FAE0DD"}}>
           <h4>Highlight</h4>
           <Typography paragraph>
             <p>

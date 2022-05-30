@@ -11,8 +11,15 @@
   /* flex-direction: row; */
   margin-left: 1.5vw;
   position: sticky;
+  /* overflow-y: hidden;
+  contain: content; */
+  
 
 
+}
+
+.MuiTypography-colorTextSecondary {
+  color: rgb(255 255 255);
 }
 
 .Wellness-Card {

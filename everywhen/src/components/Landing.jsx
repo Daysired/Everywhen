@@ -63,7 +63,11 @@ const Landing = () => {
 
           <div class="get-started__data">
             <h2 class="start__title">Start Healing Today</h2>
-            <p class="start__description">Click to Get Started.</p>
+            <p class="start__description">
+              <a href="/assessment" className="start-link">
+                Click to Get Started.
+                </a>
+            </p>
           </div>
 
           <div className="image2">
