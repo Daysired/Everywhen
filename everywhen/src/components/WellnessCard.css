@@ -13,9 +13,12 @@
   position: sticky;
   /* overflow-y: hidden;
   contain: content; */
-  
 
+}
 
+.MuiCollapse-wrapperInner {
+  height:25vh;
+  overflow-y: scroll;
 }
 
 .MuiTypography-colorTextSecondary {
@@ -29,6 +32,15 @@
   
 }
 
+.card-h4 {
+  font-weight: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+p {
+  font-family: "COM4t Fine Regular", sans-serif;
+}
 
 /* @media screen and (min-width: 820px) {
   .App {

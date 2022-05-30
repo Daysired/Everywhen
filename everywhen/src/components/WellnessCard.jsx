@@ -106,7 +106,7 @@ const WellnessCard = (props) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent style={{color:"#FAE0DD"}}>
-          <h4>Highlight</h4>
+          <h4 className="card-h4">Highlight</h4>
           <Typography paragraph>
             <p>
               What was the highlight of your day:{" "}
@@ -116,16 +116,16 @@ const WellnessCard = (props) => {
             {props.cardInfo.fields.activities}
           </Typography>
 
-          <h4>Vent That Sh*T!</h4>
+          <h4 className="card-h4">Vent That Sh*T!</h4>
           <Typography paragraph>{props.cardInfo.fields.vent}</Typography>
           <Typography paragraph>
-            <h4>What Worked</h4>
+            <h4 className="card-h4">What Worked</h4>
             <p>What are you proud of:{props.cardInfo.fields.whatWorked}</p>
             <p>What went well:{props.cardInfo.fields.wentWell}</p>
             <p>What made you feel good:{props.cardInfo.fields.feelGood}</p>
           </Typography>
           <Typography>
-            <h4>What To Improve</h4>
+            <h4 className="card-h4">What To Improve</h4>
             <p>What would you change:{props.cardInfo.fields.improve}</p>
             <p>
               What contributed to any negative emotions:
