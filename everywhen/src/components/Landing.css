@@ -77,6 +77,18 @@ body {
   width: 13rem;
 }
 
+/* .plants-div {
+  display: flex;
+  column-gap: 25rem;
+  visibility: hidden;
+}
+
+.plants__img {
+  width: 150px;
+  margin-top: 20vh;
+  visibility: hidden;
+} */
+
 /* Get Started Section */
 
 .girlplant__img {
@@ -125,7 +137,32 @@ body {
 
 /*=============== Media Queries ===============*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 280px) {
+  .how-section {
+    height: 78vh;
+  }
+
+  .step-divs {
+    padding-left: .5rem;
+  }
+
+  .about__img {
+    padding-left: .3rem;
+  }
+  .about__data {
+    padding-left: 1.2rem;
+    width: 85vw;
+  }
+  .guyplant__img {
+    margin-left: 4rem;
+  }
+  .get-started__data {
+    margin-left: -7.2rem;
+  }
+}
+
+
+/* @media screen and (max-width: 320px) {
 
   .about__title {
     font-size: 1.4rem;
@@ -158,6 +195,44 @@ body {
     
   }
 
+} */
+
+@media screen and (min-width: 390px) {
+
+  .how-section {
+    height: 60vh;
+  }
+
+}
+
+
+@media screen and (min-width: 412px) {
+
+  .how-section {
+    height: 56vh;
+  }
+
+  .about__img {
+    padding-left: 4.2rem;
+  }
+  .about__data {
+    padding-left: 3rem;
+  }
+
+}
+
+@media screen and (min-width: 414px) {
+.about__img {
+  padding-left: 4.2rem;
+}
+.about__data {
+  padding-left: 3rem;
+}
+
+.how-section {
+  height: 78vh;
+}
+ 
 }
 
 
@@ -190,6 +265,27 @@ body {
     visibility: visible;
   }
 
+  .step-divs {
+    padding-left: 3rem;
+    padding-bottom: 1.6rem;
+    /* column-gap: 3rem;
+    margin-bottom: 2rem; */
+  }
+
+  .step-description {
+    /* font-size: 1.3rem; */
+    width: 60vw;
+  }
+
+  .step__img {
+    height: 9.5%;
+    width: 9.5%;
+  }
+
+  .how-section {
+    height: 90vh;
+  }
+
 }
 
 
@@ -212,6 +308,44 @@ body {
     width: 460px;
     padding-left: 9.5rem;
   }
+
+  .how-it-works-title {
+    padding-top: 5rem;
+    font-size: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .how-section {
+    height: 112vh;
+  }
+
+  .h2-steps {
+    font-size: 1.5rem;
+  }
+
+  .step__img {
+    height: 9%;
+    width: 9%;
+  }
+
+  .step-divs {
+    padding-left: 5rem;
+    column-gap: 3rem;
+    margin-bottom: .5rem;
+  }
+
+  .step-description {
+    font-size: 1.3rem;
+    width: 60vw;
+  }
+
+  /* .plants-div {
+  
+  } */
+
+  /* .plants__img {
+   
+  } */
 
   .start__title {
     font-size: 2rem;
@@ -261,6 +395,20 @@ body {
     width: 500px;
     padding-left: 9.5rem;
    
+  }
+
+  .how-section {
+    height: 105vh;
+  }
+
+  .step-divs {
+    padding-left: 7rem;
+    margin-bottom: 0;
+  }
+
+  .step__img {
+    height:8%;
+    width:8%;
   }
 
 
@@ -323,6 +471,33 @@ body {
   width:400px;
 }
 
+.how-section {
+  height: 113vh;
+}
+
+.step__img {
+  width: 9%;
+ height: 9%;
+}
+
+.step-divs {
+  padding-left: 13rem;
+  margin-bottom: .5rem;
+}
+
+.step-description {
+  width: 40vw;
+}
+
+.plants-img {
+  /* margin-left: -50vw; */
+}
+
+/* .plants-div {
+  margin-top: 10vh;
+  margin-left: -67vw;
+} */
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -335,6 +510,10 @@ body {
    
   }
 
+  .how-section {
+    height: 108vh;
+  }
+
   .about__data {
     padding-left: 9.8rem;
     width: 690px;
@@ -345,8 +524,23 @@ body {
   }
 
   .girlplant__img {
-    margin-left: -34rem;
+    margin-left: -38rem;
   }
+
+  .step-divs {
+    padding-left: 15rem;
+    margin-bottom: 0;
+  }
+
+  .step__img {
+    width: 8.5%;
+   height: 8.5%;
+  }
+
+  /* .plants-div {
+    margin-top: 12vh;
+    column-gap: 30rem;
+  } */
 
    .start__title {
     font-size: 1.7rem;
@@ -376,12 +570,27 @@ body {
     padding-left: 24rem;
   }
 
+  .step-divs {
+    padding-left: 21rem;
+  }
+
+  .step__img {
+    width: 7%;
+    height: 7%;
+  }
+
+  /* .plants-div {
+    padding-left: 2.5rem;
+    column-gap: 36rem;
+    margin-top: 14vh;
+  } */
+
   .guyplant__img {
     margin-left: 42rem;
   }
 
   .girlplant__img {
-    margin-left: -27rem;
+    margin-left: -50rem;
   }
 
   .get-started__data {

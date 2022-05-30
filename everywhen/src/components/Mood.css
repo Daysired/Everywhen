@@ -10,15 +10,16 @@ form {
 #horizontal-list {
   display: flex;
   justify-content: space-around;
+  padding-left: .3rem;
 }
 
 h3 {
   text-align: center;
-  color: black;
+  color: #638C80;
 }
 
 label {
-  color: black;
+  color: #638C80;
 }
 
 .mood-list {
@@ -36,4 +37,17 @@ label {
 #button {
   width: 60px;
   float: right;
+}
+
+
+@media screen and (min-width:280px) {
+  .mood-list {
+    width: 5px;
+  }
+
+  #horizontal-list {
+    padding-left: 0;
+    margin-left: -2.8rem;
+    flex-wrap: wrap;
+  }
 }

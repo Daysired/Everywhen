@@ -45,6 +45,11 @@ const Landing = () => {
             <p className="step-description">Review the assessment results saved in card form.
               Use the cards as records to keep track of your progress.</p>
           </div>
+
+          {/* <div className="plants-div">
+            <img src="images/plant.png" alt="" className="plants__img" />
+            <img src="images/plant.png" alt="" className="plants__img" />
+          </div> */}
         </div>
       </section>
       
