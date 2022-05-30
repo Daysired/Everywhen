@@ -7,9 +7,9 @@
 } */
 
 .MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   /* flex-direction: row; */
-  margin-left: 1.5vw;
+  /* margin-left: 1.5vw; */
   position: sticky;
   /* overflow-y: hidden;
   contain: content; */
@@ -27,10 +27,13 @@
 
 .Wellness-Card {
   height: 100vh;
+  margin-top: 5rem;
+  margin-left: 1.5vw;
  /* display: flex; */
  /* row-gap: 30px; */
   
 }
+
 
 .card-h4 {
   font-weight: 2rem;
