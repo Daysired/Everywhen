@@ -566,10 +566,22 @@ a:hover {
 }
 
 
+@media screen and (min-width: 1200px) {
+  .about__container {
+    padding-left: 6.5rem;
+    width: 780px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
 
   .about__data {
     padding-left: 15.5rem;
+    width: 780px;
+  }
+
+  .about__container {
+    padding-left: 1.5rem;
     width: 780px;
   }
 
