@@ -568,7 +568,7 @@ a:hover {
 
 @media screen and (min-width: 1200px) {
   .about__container {
-    padding-left: 6.5rem;
+    padding-left: 10.5rem;
     width: 780px;
   }
 }
